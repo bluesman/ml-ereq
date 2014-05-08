@@ -7117,6 +7117,16 @@ button.close {
 .fa-plus-square-o:before {
   content: "\f196";
 }
+ul.popover-list {
+  border-radius: 3px;
+}
+ul.popover-list li {
+  list-style: none;
+  border-bottom: thin solid #cccccc;
+}
+.popover-link:hover {
+  text-decoration: none;
+}
 .page-body-container {
   padding: 20px;
 }
@@ -7133,7 +7143,7 @@ button.close {
 .navbar-default {
   background-color: #555555;
   color: #ffffff;
-  border-bottom: 6px solid #ffffff;
+  border-bottom: 6px solid #33cc33;
   min-height: 28px;
 }
 .navbar-default .navbar-brand {
