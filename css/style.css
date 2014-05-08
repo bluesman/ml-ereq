@@ -7164,6 +7164,10 @@ button.close {
   background-color: #ffffff;
   margin: 6px 4px;
 }
+.red-border {
+  width: 20px;
+  color: red;
+}
 .navbar-patients {
   background-color: #cccccc;
   color: #555555;
