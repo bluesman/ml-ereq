@@ -3,6 +3,33 @@
 
 <!-- @import includes/head -->
 <!-- @import includes/header -->
+<nav class="navbar navbar-patients" role="navigation">
+  <div class="container-fluid">
+    <form class="navbar-form navbar-left search-form" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search Patients"/>
+        <i class="fa fa-search search-icon"></i>
+      </div>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><i class="fa fa-list">&nbsp;List</i></a></li>
+      <li><a href="#"><i class="fa fa-th">&nbsp;Cords</i></a></li>
+    </ul>
+    <form class="navbar-form navbar-right filter-form" role="filter">
+      <div class="form-group">
+        <select>
+          <option>All Practices</option>
+          <option>Dr. Somebody</option>
+          <option>Dr. Nobody</option>
+          <option>Dr. Dolittle</option>
+          <option>Dr. Who</option>
+        </select>
+        <i class="fa fa-caret-down"></i>
+      </div>
+    </form>
+  </div><!-- /.container-fluid -->
+</nav>
+
 <div>
 	<p>patients</p>
 </div>

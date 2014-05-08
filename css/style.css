@@ -334,7 +334,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #cccccc;
 }
 .sr-only {
   position: absolute;
@@ -561,7 +561,7 @@ a.bg-danger:hover {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #cccccc;
 }
 ul,
 ol {
@@ -629,7 +629,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #cccccc;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -653,7 +653,7 @@ blockquote .small:before {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #cccccc;
   border-left: 0;
   text-align: right;
 }
@@ -1721,7 +1721,7 @@ output {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   cursor: not-allowed;
-  background-color: #eeeeee;
+  background-color: #cccccc;
   opacity: 1;
 }
 textarea.form-control {
@@ -3373,7 +3373,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 1;
   color: #555555;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: #cccccc;
   border: 1px solid #cccccc;
   border-radius: 4px;
 }
@@ -3458,7 +3458,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #cccccc;
 }
 .nav > li.disabled > a {
   color: #999999;
@@ -3473,7 +3473,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #eeeeee;
+  background-color: #cccccc;
   border-color: #33cc33;
 }
 .nav .nav-divider {
@@ -3499,7 +3499,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 4px 4px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
+  border-color: #cccccc #cccccc #dddddd;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
@@ -4160,7 +4160,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   color: #248f24;
-  background-color: #eeeeee;
+  background-color: #cccccc;
   border-color: #dddddd;
 }
 .pagination > .active > a,
@@ -4236,7 +4236,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #eeeeee;
+  background-color: #cccccc;
 }
 .pager .next > a,
 .pager .next > span {
@@ -4364,7 +4364,7 @@ a.list-group-item.active > .badge,
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #cccccc;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -7119,6 +7119,11 @@ button.close {
 }
 /* Your site specific LESS variables - these override BS defaults  */
 .navbar {
+  margin-bottom: 2px;
+  border-radius: 0px;
+  border-color: transparent;
+}
+.navbar-default {
   background-color: #555555;
   color: #ffffff;
   border-bottom: 6px solid #33cc33;
@@ -7151,4 +7156,57 @@ button.close {
   height: 20px;
   background-color: #ffffff;
   margin: 6px 4px;
+}
+.navbar-patients {
+  background-color: #cccccc;
+  color: #555555;
+  min-height: 28px;
+}
+.navbar-patients .search-form {
+  margin: 5px 0px;
+}
+.navbar-patients .search-form .form-control {
+  height: 24px;
+  font-size: 12px;
+  width: 200px;
+}
+.navbar-patients .search-form .search-icon {
+  margin-left: -20px;
+}
+.navbar-patients .filter-form {
+  margin: 5px 35px 5px 0px !important;
+}
+.navbar-patients .filter-form .form-group {
+  height: 24px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+}
+.navbar-patients .filter-form .form-group select {
+  width: 160px;
+  background: transparent;
+  padding: 5px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 0;
+  height: 24px;
+  -webkit-appearance: none;
+}
+.navbar-patients .filter-form .form-group i {
+  margin-left: -15px;
+}
+.navbar-patients .navbar-nav .navbar-text {
+  color: #333333;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0 100px;
+  font-size: 12px;
+}
+.navbar-patients .navbar-nav li a {
+  color: #555555;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 20px;
 }
