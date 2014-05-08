@@ -7175,8 +7175,13 @@ ul.popover-list li {
   margin: 6px 4px;
 }
 .red-border {
-  width: 20px;
+  border-left: solid;
+  width: 5px;
   color: red;
+}
+.note {
+  font-size: 10px;
+  color: #cccccc;
 }
 .navbar-patients {
   background-color: #cccccc;
