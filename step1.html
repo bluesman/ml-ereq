@@ -235,7 +235,7 @@
 					<div class="col-xs-12 green-box-container">
 						<div class="green-box-header clearfix">
 							<div class="title pull-left">
-								<i class="fa fa-user"><strong class="title-text">&nbsp;Insurance Information</strong></i>
+								<strong class="title-text">&nbsp;Insurance Information</strong>
 							</div>
 							<div class="info pull-right">
 								<i class="fa fa-question-circle"></i>
@@ -248,7 +248,7 @@
 							<div class="row">
 								<div class="col-xs-6">
 									<div class="row">
-										<div class="col-xs-12 checkbox">
+										<div class="col-xs-10 checkbox">
 											<div><strong>Uninsured Patient</strong></div>
 									    <label for="noInsurance">
 									    	<input type="checkbox" id="noInsurance"/ >I have verified that the patient does not have insurance.
@@ -256,27 +256,27 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-xs-12 form-group">
+										<div class="col-xs-10 form-group">
 									    <label for="isWorkersComp">Is this a worker's compensation claim?</label><br/>
-									    <input type="radio" id="isWorkersComp">&nbsp;Yes</input><br/>
-									    <input type="radio" id="isWorkersComp">&nbsp;No</input><br/>
+									    <input type="radio" name="isWorkersComp" value="yes">&nbsp;Yes</input><br/>
+									    <input type="radio" name="isWorkersComp" value="no">&nbsp;No</input><br/>
 										</div>
 									</div>
 									<div id="workers-comp-questions" class="hidden">
 										<div class="row">
-											<div class="col-xs-8 form-group">
+											<div class="col-xs-6 form-group">
 										    <label for="claimNumber">Claim/Case Number&nbsp;<span class="red">*</span></label>
 										    <input type="text" class="form-control" id="claimNumber" >
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-xs-8 form-group">
+											<div class="col-xs-6 form-group">
 										    <label for="injuryDate">Date of Injury&nbsp;<span class="red">*</span></label>
 										    <input type="text" class="form-control" id="injuryDate" >
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-xs-12 form-group">
+											<div class="col-xs-10 form-group">
 										    <label for="adjustor">Adjustor's Name&nbsp;</label>
 										    <input type="text" class="form-control" id="adjustor" >
 											</div>
@@ -284,46 +284,222 @@
 									</div>
 
 									<div class="row">
-										<div class="col-xs-12 form-group">
+										<div class="col-xs-10 form-group">
 									    <label for="isWorkersComp">Relationship to subscriber</label><br/>
-									    <input type="radio" id="isWorkersComp">&nbsp;Self</input><br/>
-									    <input type="radio" id="isWorkersComp">&nbsp;Other</input><br/>
+									    <input type="radio" name="subscriberRelationship" value="self">&nbsp;Self</input><br/>
+									    <input type="radio" name="subscriberRelationship" value="other">&nbsp;Other</input><br/>
+										</div>
+									</div>
+
+									<div id="other-subscriber-questions" class="hidden">
+										<div class="row">
+											<div class="col-xs-10 form-group">
+										    <label for="subscriber">Subscriber's Name&nbsp;</label>
+										    <input type="text" class="form-control" id="subscriber" >
+											</div>
 										</div>
 									</div>
 
 									<div class="row">
-										<div class="col-xs-12 form-group">
+										<div class="col-xs-10 form-group">
 									    <label for="insuranceName">Insurance Name&nbsp;<span class="red">*</span></label>
 									    <input type="text" class="form-control" id="insuranceName" >
 										</div>
 									</div>
 
 									<div class="row">
-										<div class="col-xs-12 form-group">
+										<div class="col-xs-10 form-group">
 									    <label for="insuranceAddress">Address&nbsp;<span class="red">*</span></label>
 									    <input type="text" class="form-control" id="insuranceAddress" >
 										</div>
 									</div>
 
 									<div class="row">
-										<div class="col-xs-12 form-group">
+										<div class="col-xs-10 form-group">
 									    <label for="insuranceZip">Zip&nbsp;<span class="red">*</span></label>
 									    <input type="text" class="form-control" id="insuranceZip" >
 										</div>
 									</div>
 
 									<div class="row">
-										<div class="col-xs-12 form-group">
-									    <label for="insuranceCity">Zip&nbsp;<span class="red">*</span></label>
-									    <input type="text" class="form-control" id="insuranceZip" >
+										<div class="col-xs-6 form-group">
+									    <label for="insuranceCity">City&nbsp;<span class="red">*</span></label>
+									    <input type="text" class="form-control" id="insuranceCity" >
+										</div>
+										<div class="col-xs-4 form-group">
+									    <label for="insuranceState">State&nbsp;<span class="red">*</span></label>
+									    <input type="text" class="form-control" id="insuranceState" >
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-6 form-group">
+									    <label for="effectiveDate">Effective Date&nbsp;<span class="red">*</span></label>
+									    <input type="text" class="form-control" id="effectiveDate" >
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-10 form-group">
+									    <label for="subscriberId">Subscriber ID&nbsp;<span class="red">*</span></label>
+									    <input type="text" class="form-control" id="subscriberId" >
 										</div>
 									</div>
 
+									<div class="row">
+										<div class="col-xs-10 form-group">
+									    <label for="groupNumber">Group Number&nbsp;<span class="red">*</span></label>
+									    <input type="text" class="form-control" id="groupNumber" >
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-xs-10 form-group">
+									    <label for="planId">Plan ID&nbsp;<span class="red">*</span></label>
+									    <input type="text" class="form-control" id="planId" >
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-xs-10 form-group">
+									    <label for="authorizationCode">Authorization Code&nbsp;<span class="red">*</span></label>
+									    <input type="text" class="form-control" id="authorizationCode" >
+										</div>
+									</div>
+
+									<div id="row">
+										<button class="btn btn-info" id="add-insurer-button">Add Insurer</button>
+									</div>
+
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-6 insurance-list">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="insurance-row clearfix">
+												<div class="insurance-number col-xs-2">1st</div>
+												<div class="insurance-container col-xs-10">
+													<div class="insurance-card clearfix">
+														<div class="insurance-card-move pull-left">
+															<div class="circles">
+																<i class="fa fa-circle"></i><br/>
+																<i class="fa fa-circle"></i><br/>
+																<i class="fa fa-circle"></i><br/>
+															</div>
+															<div class="arrow">
+																<i class="fa fa-play fa-rotate-90"></i>
+															</div>
+														</div>
+														<div class="insurance-card-body pull-left">
+															<i class="fa fa-times-circle insurance-card-close"></i>
+															<a href="#" class="insurance-card-edit" >Edit</a>
+															<div class="insurance-card-info">
+																<h3>XYZ Health Insurance</h3>
+																<address>1234 Front St.<br/>San Diego, CA 92120</address>
+																<strong>Effective Date:&nbsp;</strong><span>00/00/0000</span><br/>
+																<strong>Subscriber ID:&nbsp;</strong><span>A7087929</span><br/>
+																<strong>Group Number:&nbsp;</strong><span>7891011</span><br/>
+																<strong>Plan ID:&nbsp;</strong><span>001b678</span><br/>
+																<strong>Authorization Code:&nbsp;</strong><span>12345678</span><br/>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="row prescribed-medications-box">
+					<div class="col-xs-12 green-box-container">
+						<div class="green-box-header clearfix">
+							<div class="title pull-left">
+								<strong class="title-text">&nbsp;Prescribed Medications</strong>
+							</div>
+							<div class="info pull-right">
+								<i class="fa fa-question-circle"></i>
+							</div>
+						</div>
+						<div class="green-box-body">
+							<div class="row medications-form-container">
+								<div class="col-xs-6">
+									<div class="row">
+										<div class="col-xs-12">
+											<strong>Search by Medication Name</strong>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="form-group medication-search-container">
+												<i class="fa fa-search"></i>
+												<input type="text" class="form-control" name="medication-search" id="medication-search"/>
+												<i class="fa fa-times-circle"></i>
+											</div>
+											<div>
+												<select id="medications-list" name="medication-list" multiple="multiple" class="form-control">
+													<option value="1">Option 1</option>
+													<option value="2">Option 2</option>
+													<option value="3">Option 3</option>
+													<option value="4">Option 4</option>
+													<option value="5">Option 5</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label for="otherMedications">Other Medications</label><br/>
+												<textarea id="other-medications" name="otherMedications" class="form-control" rows="5"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-6 medications-list-col">
+									<div class="row">
+										<div class="medications-list">
+											<div class="col-xs-12 medications-list-item clearfix">
+												<i class="fa fa-check pull-left"></i>
+												<div class="medication-name pull-left">Medication 1</div>
+												<i class="fa fa-times-circle pull-right"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="medications-list">
+											<div class="col-xs-12 medications-list-item clearfix">
+												<i class="fa fa-check pull-left"></i>
+												<div class="medication-name pull-left">Medication 1</div>
+												<i class="fa fa-times-circle pull-right"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="medications-list">
+											<div class="col-xs-12 medications-list-item clearfix">
+												<i class="fa fa-check pull-left"></i>
+												<div class="medication-name pull-left">Medication 1</div>
+												<i class="fa fa-times-circle pull-right"></i>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-xs-12">Indicating a medication does not constitute a test request.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row form-submit-buttons">
+					<div class="col-xs-2">
+						<a href="/step2.html" class="btn btn-info">Save and Continue</a>
+					</div>
+					<div class="col-xs-4 link-container">
+						<a href="/step1.html" class="add-another-patient">Save and Add Another Patient</a>
 					</div>
 				</div>
 			</form>
