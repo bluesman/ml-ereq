@@ -7201,6 +7201,16 @@ button.close {
 .practices {
   margin-top: 10px;
 }
+select {
+  width: 160px;
+  background: transparent;
+  padding: 5px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 0;
+  height: 24px;
+  -webkit-appearance: none;
+}
 .pagation {
   margin-top: 20px;
 }
@@ -7291,6 +7301,13 @@ button.close {
   background-color: #33cc33;
   border-color: #33cc33;
   color: white;
+}
+.preview {
+  color: black;
+  text-decoration: none;
+}
+.status {
+  border-right: solid #cc3300 10px;
 }
 .navbar-patients {
   background-color: #cccccc;
