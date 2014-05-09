@@ -282,30 +282,55 @@
 	}
 
 	.steps-container {
-		.disabled {
-			.header-container {
-				color:lighten(@gray-light,20%);
-				h2 {
-					color:lighten(@brand-success,40%);
-				}
-			}
-			.card-body {
-				background-color: lighten(@gray-lighter,10%);
-				color:lighten(@gray-dark,40%);
-			}
-		}
 
 		#step1-container, #step2-container, #step3-container {
 			margin-bottom:40px;
 
 		}
+
+		#step3-container {
+			.header-container {
+				background-color: transparent;
+			}
+
+			.step3-body {
+				background-color:lighten(@gray-lighter,10%);
+				padding:10px;
+
+				.step3-bubble {
+					.fa-circle.active {
+						color:@brand-success;
+					}
+					.fa-circle-o {
+						color:@gray-light;
+					}
+					.step3-bubble-text {
+						line-height: 30px;
+						vertical-align: middle;
+						color:@gray-light;
+					}
+				}
+			}
+		}
+
 		.header-container {
 			color:@gray-light;
 			h2 {
 				color:@brand-success;
 				font-size:24px;
-				margin:10px 0px 2px 0px;
+				margin:2px 0px 2px 0px;
 			}
+			padding:10px;
+			background-color: @gray-lighter;
+			border-radius:3px;
+			position:relative;
+			i {
+				position:absolute;
+				top:20px;
+				right:20px;
+				font-size: 30px;
+			}
+
 		}
 
 		.card-body {

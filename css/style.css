@@ -7665,28 +7665,46 @@ select {
   padding: 10px;
   color: #999999;
 }
-.step3-page .steps-container .disabled .header-container {
-  color: #cccccc;
-}
-.step3-page .steps-container .disabled .header-container h2 {
-  color: #d6f5d6;
-}
-.step3-page .steps-container .disabled .card-body {
-  background-color: #e6e6e6;
-  color: #999999;
-}
 .step3-page .steps-container #step1-container,
 .step3-page .steps-container #step2-container,
 .step3-page .steps-container #step3-container {
   margin-bottom: 40px;
 }
+.step3-page .steps-container #step3-container .header-container {
+  background-color: transparent;
+}
+.step3-page .steps-container #step3-container .step3-body {
+  background-color: #e6e6e6;
+  padding: 10px;
+}
+.step3-page .steps-container #step3-container .step3-body .step3-bubble .fa-circle.active {
+  color: #33cc33;
+}
+.step3-page .steps-container #step3-container .step3-body .step3-bubble .fa-circle-o {
+  color: #999999;
+}
+.step3-page .steps-container #step3-container .step3-body .step3-bubble .step3-bubble-text {
+  line-height: 30px;
+  vertical-align: middle;
+  color: #999999;
+}
 .step3-page .steps-container .header-container {
   color: #999999;
+  padding: 10px;
+  background-color: #cccccc;
+  border-radius: 3px;
+  position: relative;
 }
 .step3-page .steps-container .header-container h2 {
   color: #33cc33;
   font-size: 24px;
-  margin: 10px 0px 2px 0px;
+  margin: 2px 0px 2px 0px;
+}
+.step3-page .steps-container .header-container i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
 }
 .step3-page .steps-container .card-body {
   border-radius: 4px;
