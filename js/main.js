@@ -51,5 +51,10 @@ $(document).ready(function(){
 		$('#patients-page-cards').removeClass('hidden');
 	});
 
+	/* display the practiceLocationModal when they click edit */
+	$(".patients-page-body-container").find("a").click(function(e) {
+		e.preventDefault();
+		$('#practiceLocationModal').modal('show');
+	});
 
 });
