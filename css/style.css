@@ -7498,11 +7498,22 @@ select {
   top: 7px;
   right: 4px;
 }
+.step1-page #noInsurance {
+  margin-left: 0px;
+}
+.step1-page .insurance-list > .row {
+  margin-bottom: 20px;
+}
+.step1-page .insurance-list .insurance-number {
+  padding: 80px 10px;
+  font-size: 22px;
+}
 .step1-page .insurance-list .insurance-container {
   border-radius: 4px;
   border: thin dashed #555555;
   padding: 10px;
   font-size: 12px;
+  min-height: 214px;
 }
 .step1-page .insurance-list .insurance-container .insurance-number {
   font-size: 24px;

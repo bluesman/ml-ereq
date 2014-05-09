@@ -258,11 +258,11 @@
 									<div class="row">
 										<div class="col-xs-10 form-group">
 									    <label for="isWorkersComp">Is this a worker's compensation claim?</label><br/>
-									    <input type="radio" name="isWorkersComp" value="yes">&nbsp;Yes</input><br/>
-									    <input type="radio" name="isWorkersComp" value="no">&nbsp;No</input><br/>
+									    <input id="workers-comp-yes" type="radio" name="isWorkersComp" value="yes">&nbsp;Yes</input><br/>
+									    <input id="workers-comp-no" type="radio" name="isWorkersComp" value="no">&nbsp;No</input><br/>
 										</div>
 									</div>
-									<div id="workers-comp-questions" class="hidden">
+									<div id="workers-comp-questions" class="hide">
 										<div class="row">
 											<div class="col-xs-6 form-group">
 										    <label for="claimNumber">Claim/Case Number&nbsp;<span class="red">*</span></label>
@@ -291,7 +291,7 @@
 										</div>
 									</div>
 
-									<div id="other-subscriber-questions" class="hidden">
+									<div id="other-subscriber-questions" class="hide">
 										<div class="row">
 											<div class="col-xs-10 form-group">
 										    <label for="subscriber">Subscriber's Name&nbsp;</label>
@@ -374,7 +374,9 @@
 									<div class="row">
 										<div class="col-xs-12">
 											<div class="insurance-row clearfix">
-												<div class="insurance-number col-xs-2">1st</div>
+												<div class="col-xs-2">
+													<div class="insurance-number">1st</div>
+												</div>
 												<div class="insurance-container col-xs-10">
 													<div class="insurance-card clearfix">
 														<div class="insurance-card-move pull-left">
@@ -401,6 +403,28 @@
 															</div>
 														</div>
 													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="insurance-row clearfix">
+												<div class="col-xs-2">
+													<div class="insurance-number">2nd</div>
+												</div>
+												<div class="insurance-container col-xs-10">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="insurance-row clearfix">
+												<div class="col-xs-2">
+													<div class="insurance-number">3rd</div>
+												</div>
+												<div class="insurance-container col-xs-10">
 												</div>
 											</div>
 										</div>
