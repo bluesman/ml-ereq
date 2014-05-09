@@ -7211,8 +7211,9 @@ button.close {
   color: #999999;
   font-size: 10px;
 }
-.order-nav {
-  margin-right: 0px;
+.filter {
+  background-color: #999999;
+  color: white;
 }
 .order-info {
   background-color: #f7f7f7;
@@ -7233,27 +7234,20 @@ button.close {
 .order-gray {
   border-left: solid #999999 10px;
 }
-.order-button {
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
+.order-btn {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.order-button:hover {
+.order-btn:hover {
   background-color: #ff9933;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  text-decoration: none;
+  border: #ff9933;
 }
-.new-order {
+.new-order-btn {
   margin-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 35px;
   margin-left: 50px;
+  background-color: #ff9933;
+  border: #ff9933;
 }
 .sidebar {
   background-color: #cccccc;
@@ -7279,6 +7273,21 @@ button.close {
 }
 .info {
   margin: 0;
+}
+.modal-body {
+  margin-bottom: 25px;
+}
+.reopen-modal {
+  background-color: lightgreen;
+  border: solid #33cc33 2px;
+}
+.fa-pencil-square-o {
+  color: #33cc33;
+}
+.edit-order {
+  background-color: #33cc33;
+  border-color: #33cc33;
+  color: white;
 }
 .navbar-patients {
   background-color: #cccccc;

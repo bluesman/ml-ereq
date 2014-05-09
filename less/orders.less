@@ -42,8 +42,9 @@
 			font-size: 10px;
 		}
 
-.order-nav {
-	margin-right: 0px;
+.filter {
+	background-color: @gray-light;
+	color: white;
 }
 
 .order-info {
@@ -67,29 +68,22 @@
 		border-left: solid @gray-light 10px;
 	}
 
-	 .order-button {
-	 	background-color: black;
-	 	color: white;
-	 	border-radius: 5px;
-	 	text-align: center;
-	 	margin-top: 5px;
-	 	margin-bottom: 5px;
-	 }
+	.order-btn {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
 
-	 .order-button:hover {
+	 .order-btn:hover {
 	 	background-color: @brand-warning;
-	 	color: white;
-	 	border-radius: 5px;
-	 	text-align: center;
-	 	margin-top: 5px;
-	 	margin-bottom: 5px;
-	 	text-decoration: none;
+	 	border: @brand-warning;
 	 }
 
-.new-order {
+.new-order-btn {
 	margin-top: 50px;
-	margin-bottom: 70px;
+	margin-bottom: 35px;
 	margin-left: 50px;
+	background-color: @brand-warning;
+	border: @brand-warning;
 }
 
 .sidebar {
@@ -123,6 +117,24 @@
 			margin: 0;
 		}
 
+.modal-body {
+	margin-bottom: 25px;
+}
+
+.reopen-modal {
+	background-color: lightgreen;
+	border: solid @brand-success 2px;
+}
+
+.fa-pencil-square-o {
+	color: @brand-success;
+}
+
+.edit-order {
+	background-color: @brand-success;
+	border-color: @brand-success;
+	color: white;
+}
 
 
 

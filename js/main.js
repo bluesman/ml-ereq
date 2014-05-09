@@ -1,6 +1,52 @@
 $(document).ready(function(){
 	/* orders.html javascript */
+	$(function() {
+        $("#datepicker").datepicker({
+            showOn: "both",
+            buttonImage: "",
+            buttonImageOnly: false,
+        });
+    });
 
+	$(function() {
+    $( "#from" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 2,
+      onClose: function( selectedDate ) {
+        $( "#to" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#to" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 2,
+      onClose: function( selectedDate ) {
+        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+  });
+
+	if ($('#orders-page-list').is(":visible")) {
+		$('#orders-list-control').toggleClass('active');
+	}
+	if ($('#orders-page-table').is(":visible")) {
+		$('#orders-table-control').toggleClass('active');
+	}
+
+	$('#orders-list-control').click(function() {
+		$('#orders-list-control').addClass('active');
+		$('#orders-table-control').removeClass('active');
+		$('#orders-page-table').addClass('hidden');
+		$('#orders-page-list').removeClass('hidden');
+	});
+
+	$('#orders-table-control').click(function() {
+		$('#orders-table-control').addClass('active');
+		$('#orders-list-control').removeClass('active');
+		$('#orders-page-list').addClass('hidden');
+		$('#orders-page-table').removeClass('hidden');
+	});
 
 	/*
 	 *

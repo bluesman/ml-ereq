@@ -24,6 +24,8 @@
     <![endif]-->
 
 		<link rel="stylesheet" href="/css/style.css" charset="utf-8">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
 
     <script src="/bower_components/sprockets-modernizr/modernizr.js" type="text/javascript" charset="utf-8"></script>
 </head>
@@ -112,64 +114,108 @@
 				      </div>
 				    </form>
 				    <ul class="nav navbar-nav">
-				      <li><a href="#"><i class="fa fa-calendar">&nbsp;Date Range</i></a></li>
-				      <li><a href="#"><i class="fa fa-align-justify">&nbsp;Filter</i></a></li>
+				    	<li>
+					      	<a href="#"><i class="fa fa-calendar">
+								<input type="hidden" id="from" name="from">
+								<input type="hidden" id="to" name="to">&nbsp;Date Range</i>
+							</a>
+						</li>
+				    	<li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-align-justify">&nbsp;Filter</i></a>
+				          <ul class="dropdown-menu filter">
+				            <li><a href="#">All</a></li>
+				            <li><a href="#">Order Not Sent</a></li>
+				            <li><a href="#">Order Sent</a></li>
+				            <li><a href="#">Order Canceled</a></li>
+				          </ul>
+				        </li>
 				    </ul>
 				    <ul class="nav navbar-nav navbar-right">
-				      <li><a href="#"><i class="fa fa-list">&nbsp;List</i></a></li>
-				      <li><a href="#"><i class="fa fa-table">&nbsp;Table</i></a></li>
+				      <li><a href="#" id="orders-list-control"><i class="fa fa-list">&nbsp;List</i></a></li>
+				      <li><a href="#" id="orders-table-control"><i class="fa fa-table">&nbsp;Table</i></a></li>
 				    </ul>
 				  </div><!-- /.container-fluid -->
 				</nav>
 			</div>
-			<div class="row">
-				<div class="col-md-12 order-info">
-					<div class="row">
-						<img class="col-md-3" src="images/order-red.png">
-						<img class="col-md-8 order-red" src="images/order-content.png">
-						<button type="button" class="btn btn-info">Send</button>
-						<a href="" class="col-md-1 order-button">Send</a>
-						<a href="" class="col-md-1 order-button">Edit</a>
-						<a href="" class="col-md-1 order-button">Cancel</a>
+			<div id="orders-page-list" class="hidden">
+				<div class="row">
+					<div class="col-md-12 order-info">
+						<div class="row">
+							<img class="col-md-3" src="images/order-red.png">
+							<img class="col-md-8 order-red" src="images/order-content.png">
+							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Send</a>
+							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Edit</a>
+							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Cancel</a>
+						</div>
 					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 order-info">
+						<div class="row">
+							<img class="col-md-3" src="images/order-yellow.png">
+							<img class="col-md-8 order-orange" src="images/order-content.png">
+							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Edit</a>
+							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Cancel</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 order-info">
+						<div class="row">
+							<img class="col-md-3" src="images/order-yellow.png">
+							<img class="col-md-8 order-orange" src="images/order-content.png">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 order-info">
+						<div class="row">
+							<img class="col-md-3" src="images/order-green.png">
+							<img class="col-md-8 order-green" src="images/order-content.png">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 order-info">
+						<div class="row">
+							<img class="col-md-3" src="images/order-gray.png">
+							<img class="col-md-8 order-gray" src="images/order-content.png">
+							<button type="button" class="btn btn-info order-btn col-md-1" data-toggle="modal" data-target="#myModal">Reopen</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+				    <div class="modal-content reopen-modal">
+				      <div class="modal-body">
+				        <i class="fa fa-pencil-square-o fa-5x"></i> This order has been reopened and is now listed as <strong>Unfinished.</strong>
+				        <button type="button" class="btn btn-default edit-order pull-right" data-dismiss="modal">Edit Order Now</button>
+				      </div>
+				    </div>
+				  </div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 order-info">
-					<div class="row">
-						<img class="col-md-3" src="images/order-yellow.png">
-						<img class="col-md-9 order-orange" src="images/order-content.png">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 order-info">
-					<div class="row">
-						<img class="col-md-3" src="images/order-yellow.png">
-						<img class="col-md-9 order-orange" src="images/order-content.png">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 order-info">
-					<div class="row">
-						<img class="col-md-3" src="images/order-green.png">
-						<img class="col-md-9 order-green" src="images/order-content.png">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 order-info">
-					<div class="row">
-						<img class="col-md-2" src="images/order-gray.png">
-						<img class="col-md-8 order-gray" src="images/order-content.png">
-					</div>
-				</div>
+			<div id="orders-page-table" class="row">
+				<table>
+					<tr>
+						<th>Preview</th>
+						<th>Specimin ID</th>
+						<th>Order Created Date</th>
+						<th>Patient Name <i class="fa fa-caret-down"></i></th>
+						<th>Order Status</th>
+						<th>Order Sent Date</th>
+						<th> </th>
+					</tr>
+					<tr>
+						<td><i class="fa fa-external-link"></i></td>
+						<td></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 		<div class="col-md-3">
 			<div class="row">
-				<p class="new-order">Create new order</p>
+				<a href="#" type="button" class="btn btn-info new-order-btn col-md-8">Create new order</a>
 			</div>
 			<div class="sidebar">
 				<div class="row sidebar-content-1">
@@ -207,6 +253,9 @@
     <script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ 	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  
 
     <!-- Local Scripts -->
 
