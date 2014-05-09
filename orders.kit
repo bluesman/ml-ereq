@@ -7,15 +7,15 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-10">
-			<div class="row">
+		<div class="col-md-9">
+			<div class="row head-row">
 				<div class="col-md-2">
-					<h1>Orders</h1>
+					<h1 class="orders">Orders</h1>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<p class="note">Only includes Electronic Requisition orders</p>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 practices">
 				  <form class="navbar-form navbar-right filter-form" role="filter">
 				      <div class="form-group">
 				        <select>
@@ -29,14 +29,15 @@
 				      </div>
 				    </form>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-1 pagation">
 				  <p>1-100</p>
 				</div>
-				<div class="col-md-2">
-				  new/old arrows
+				<div class="col-md-2 arrows">
+				  <a href="#" class="col-md-1 change-page"><i class="fa fa-play fa-2x fa-flip-horizontal"></i></a>
+				  <a href="#" class="col-md-1 change-page"><i class="fa fa-play fa-2x"></i></a>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row order-nav">
 				<nav class="navbar navbar-patients" role="navigation">
 				  <div class="container-fluid">
 				    <form class="navbar-form navbar-left search-form" role="search">
@@ -57,73 +58,81 @@
 				</nav>
 			</div>
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-12 order-info">
 					<div class="row">
 						<img class="col-md-3" src="images/order-red.png">
-						<img class="col-md-9" src="images/order-content.png">
+						<img class="col-md-8 order-red" src="images/order-content.png">
+						<button type="button" class="btn btn-info">Send</button>
+						<a href="" class="col-md-1 order-button">Send</a>
+						<a href="" class="col-md-1 order-button">Edit</a>
+						<a href="" class="col-md-1 order-button">Cancel</a>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-12 order-info">
 					<div class="row">
 						<img class="col-md-3" src="images/order-yellow.png">
-						<img class="col-md-9" src="images/order-content.png">
+						<img class="col-md-9 order-orange" src="images/order-content.png">
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-12 order-info">
 					<div class="row">
 						<img class="col-md-3" src="images/order-yellow.png">
-						<img class="col-md-9" src="images/order-content.png">
+						<img class="col-md-9 order-orange" src="images/order-content.png">
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-12 order-info">
 					<div class="row">
 						<img class="col-md-3" src="images/order-green.png">
-						<img class="col-md-9" src="images/order-content.png">
+						<img class="col-md-9 order-green" src="images/order-content.png">
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-12 order-info">
 					<div class="row">
-						<img class="col-md-3" src="images/order-grey.png">
-						<img class="col-md-9" src="images/order-content.png">
+						<img class="col-md-2" src="images/order-gray.png">
+						<img class="col-md-8 order-gray" src="images/order-content.png">
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-3">
 			<div class="row">
-				<p class="col=md-2">Create new order</p>
+				<p class="new-order">Create new order</p>
 			</div>
-			<div class="row">
-				<h3>New</h3>
-				<p>Sartorial in Etsy artisan High Life, ugh vinyl retro. Retro small batch flannel reprehenderit photo booth Pitchfork nisi. Squid Odd Future High Life fingerstache, elit stumptown proident sriracha artisan <a href="#">aliquip bespoke.</a></p>
-			</div>
-			<div class="row">
-				<i class="fa fa-envelope-o fa-3x pill-left"></i>
-				<div class="col-col-md-10">
-					<p>Millenium Laboratories</p>
-					<p>16981 Via Tazon, Suite F</p>
-					<p>San Diego, CA 92127</p>
+			<div class="sidebar">
+				<div class="row sidebar-content-1">
+					<div class="col-md-12">
+						<h3>New</h3>
+						<p>Sartorial in Etsy artisan High Life, ugh vinyl retro. Retro small batch flannel reprehenderit photo booth Pitchfork nisi. Squid Odd Future High Life fingerstache, elit stumptown proident sriracha artisan <a href="#" class="sidebar-link">aliquip bespoke.</a></p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<i class="fa fa-mobile fa-3x pull-left"></i>
-				<div class="col-col-md-10">
-					<p>Toll Free: 877-451-3534</p>
-					<p>Fax: 858-451-3636</p>
+				<div class="row sidebar-content-2">
+					<i class="fa fa-envelope-o fa-2x pull-left col-md-2 icon"></i>
+					<div class="col-col-md-10">
+						<p class="info">Millenium Laboratories</p>
+						<p class="info">16981 Via Tazon, Suite F</p>
+						<p class="info">San Diego, CA 92127</p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<i class="fa fa-lock fa-3x pull-left"></i>
-				<div class="col-col-md-10">
-					<p>All information in encrypted and transmitted without risk using a Secure Sockets Locker (SSL) protocol.</p>
+				<div class="row sidebar-content-2">
+					<i class="fa fa-mobile fa-3x pull-left col-md-2 icon"></i>
+					<div class="col-col-md-10">
+						<p class="info">Toll Free: 877-451-3534</p>
+						<p class="info">Fax: 858-451-3636</p>
+					</div>
+				</div>
+				<div class="row sidebar-content-2">
+					<i class="fa fa-lock fa-3x pull-left col-md-2 icon"></i>
+					<div class="col-col-md-10">
+						<p>All information in encrypted and transmitted without risk using a Secure Sockets Locker (SSL) protocol.</p>
+					</div>
 				</div>
 			</div>
 		</div>
