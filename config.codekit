@@ -11072,6 +11072,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/patient-row.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/patient-row.kit",
+		"outputAbbreviatedPath": "\/includes\/patient-row.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -11305,7 +11314,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Ashley Stanley",
+"lastSavedByUser": "Tom Walpole",
 "manualImportLinks": {
 	},
 "projectAttributes": {

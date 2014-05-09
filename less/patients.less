@@ -40,6 +40,9 @@
 	}
 
 	.navbar-nav {
+		.active {
+			background-color: @gray-light;
+		}
 
 		.navbar-text {
 			color:@gray-dark;
@@ -53,6 +56,10 @@
 
 
 		li {
+			a:hover {
+				background-color: @gray-light;
+			}
+
 			a {
 				color:@gray;
 				padding-top: 7px;
@@ -65,6 +72,7 @@
 
 .patients-page-body-container {
 	h1 {
+		padding:0px 15px;
 		a {
 			color:@gray-light;
 		}
@@ -124,4 +132,14 @@
 			padding:4px;
 		}
 	}
+
+	table {
+		margin-top:10px;
+		border: thin solid @gray-dark;
+
+		th, td {
+			border: none !important;
+		}
+	}
+
 }

@@ -7,15 +7,18 @@ Import Bootstrap LESS and Site Specific LESS
 @import '../bower_components/bootstrap/less/bootstrap.less'; /* Compiled in Codekit - referenced here as a Framework */
 @import '../bower_components/font-awesome/less/font-awesome.less';
 
-ul.popover-list {
-	border-radius:3px;
+.popover-content {
 
-	li {
-		list-style:none;
-		border-bottom:thin solid @gray-lighter;
+	ul.popover-list {
+		border-radius:3px;
+		padding:0px;
+		li {
+			padding:10px;
+			list-style:none;
+			border-bottom:thin solid @gray-lighter;
+		}
 	}
 }
-
 
 .popover-link:hover {
 	text-decoration: none;
