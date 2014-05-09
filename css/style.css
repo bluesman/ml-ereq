@@ -7117,6 +7117,9 @@ button.close {
 .fa-plus-square-o:before {
   content: "\f196";
 }
+.red {
+  color: #cc3300;
+}
 .popover-content ul.popover-list {
   border-radius: 3px;
   padding: 0px;
@@ -7413,4 +7416,58 @@ button.close {
 .patients-page-body-container table th,
 .patients-page-body-container table td {
   border: none !important;
+}
+.step1-page .practice-container {
+  padding: 10px;
+  color: #999999;
+}
+.step1-page .steps-container .disabled .header-container {
+  color: #cccccc;
+}
+.step1-page .steps-container .disabled .header-container h2 {
+  color: #d6f5d6;
+}
+.step1-page .steps-container .disabled .card-body {
+  color: #999999;
+}
+.step1-page .steps-container #step1-container,
+.step1-page .steps-container #step2-container,
+.step1-page .steps-container #step3-container {
+  margin-bottom: 40px;
+}
+.step1-page .steps-container .header-container {
+  color: #999999;
+}
+.step1-page .steps-container .header-container h2 {
+  color: #33cc33;
+  font-size: 24px;
+  margin: 10px 0px 2px 0px;
+}
+.step1-page .steps-container .card-body {
+  border-radius: 4px;
+  border: 2px dashed #999999;
+  background-color: #cccccc;
+  color: #333333;
+  padding: 10px;
+}
+.step1-page .save-and-quit-button {
+  margin-top: 15px;
+}
+.step1-page .retrieve-button {
+  margin-top: 25px;
+}
+.step1-page .green-box-container .green-box-header {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #adebad;
+  color: #145214;
+}
+.step1-page .green-box-container .green-box-header .title-text {
+  color: #333333;
+}
+.step1-page .green-box-container .green-box-body {
+  padding: 10px 10px 10px 30px;
+  background-color: #cccccc;
+  min-height: 100px;
+  margin-bottom: 20px;
 }
