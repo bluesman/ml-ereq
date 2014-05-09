@@ -7445,6 +7445,7 @@ select {
   color: #d6f5d6;
 }
 .step1-page .steps-container .disabled .card-body {
+  background-color: #e6e6e6;
   color: #999999;
 }
 .step1-page .steps-container #step1-container,
@@ -7466,6 +7467,7 @@ select {
   background-color: #cccccc;
   color: #333333;
   padding: 10px;
+  min-height: 150px;
 }
 .step1-page .save-and-quit-button {
   margin-top: 15px;

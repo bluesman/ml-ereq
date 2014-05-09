@@ -230,6 +230,7 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="row">
 					<div class="col-xs-12 green-box-container">
 						<div class="green-box-header clearfix">
@@ -241,7 +242,66 @@
 							</div>
 						</div>
 						<div class="green-box-body">
+							<div class="row">
+								<div class="col-xs-2 col-xs-offset-10">Required <span class="red">*</span></div>
+							</div>
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="row">
+										<div class="col-xs-12 checkbox">
+											<div><strong>Uninsured Patient</strong></div>
+									    <label for="noInsurance">
+									    	<input type="checkbox" id="noInsurance"/ >I have verified that the patient does not have insurance.
+									    </label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12 form-group">
+									    <label for="isWorkersComp">Is this a worker's compensation claim?</label><br/>
+									    <input type="radio" id="isWorkersComp">&nbsp;Yes</input><br/>
+									    <input type="radio" id="isWorkersComp">&nbsp;No</input><br/>
+										</div>
+									</div>
+									<div id="workers-comp-questions" class="hidden">
+										<div class="row">
+											<div class="col-xs-8 form-group">
+										    <label for="claimNumber">Claim/Case Number&nbsp;<span class="red">*</span></label>
+										    <input type="text" class="form-control" id="claimNumber" >
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-8 form-group">
+										    <label for="injuryDate">Date of Injury&nbsp;<span class="red">*</span></label>
+										    <input type="text" class="form-control" id="injuryDate" >
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 form-group">
+										    <label for="adjustor">Adjustor's Name&nbsp;</label>
+										    <input type="text" class="form-control" id="adjustor" >
+											</div>
+										</div>
+									</div>
 
+									<div class="row">
+										<div class="col-xs-12 form-group">
+									    <label for="isWorkersComp">Relationship to subscriber</label><br/>
+									    <input type="radio" id="isWorkersComp">&nbsp;Self</input><br/>
+									    <input type="radio" id="isWorkersComp">&nbsp;Other</input><br/>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-xs-12 form-group">
+									    <label for="insuranceName">Insurance Name&nbsp;<span class="red">*</span></label>
+									    <input type="text" class="form-control" id="insuranceName" >
+										</div>
+									</div>
+
+								</div>
+								<div class="col-xs-6">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
