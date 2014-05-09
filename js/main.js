@@ -105,3 +105,9 @@ $(document).ready(function(){
 	});
 
 });
+
+
+	/* step 2 */
+	$(function() {
+    $( "#datepicker" ).datepicker();
+  });

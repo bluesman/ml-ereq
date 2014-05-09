@@ -70,8 +70,210 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div>
-	<p>step2</p>
+<div class="container-fluid steps-page step2-page">
+	<div class="row">
+		<div class="col-xs-3">
+			<div class="practice-container">
+				<div class="practice-name"><strong>Practice Name</strong></div>
+				<div class="practice-address">700 E Michigan St, Orlando, FL 32806</div>
+			</div>
+			<div class="steps-container">
+				<div id="step1-container">
+					<div class="header-container">
+						<h2>Step 1</h2>
+						<div>Patient Information</div>
+					</div>
+					<div class="step-card step1-card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xs-12">
+									<strong>Practice's Patient ID: </strong>dd854953
+								</div>
+								<div class="col-xs-12">
+									<strong>Social Security Number: </strong>XXX-XX-1234
+								</div>
+								<div class="col-xs-12">
+									<strong>Date Of Birth: </strong>01/11/1970
+								</div>
+								<div class="col-xs-12">
+									<strong>Gender: </strong>Male
+								</div>
+								<div class="col-xs-12">
+									<strong>Prescribed Medications: </strong>
+								</div>
+								<div class="col-xs-12">
+									<strong>Insurance Providers: </strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="step2-container">
+					<div class="header-container">
+						<h2>Step 2</h2>
+						<div>Specimen Information</div>
+					</div>
+					<div class="step-card step1-card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xs-12">
+									<strong>Specimen ID: </strong>
+								</div>
+								<div class="col-xs-12">
+									<strong>Specimen Type: </strong>Urine
+								</div>
+								<div class="col-xs-12">
+									<strong>Date Collected: </strong>01/21/1975
+								</div>
+								<div class="col-xs-12">
+									<strong>Temperature Check: </strong>Yes
+								</div>
+								<div class="col-xs-12">
+									<strong>Worker's Comp: </strong>Yes
+								</div>
+								<div class="col-xs-12">
+									<strong>POC: </strong>11/12/2013 Panel Cup
+								</div>
+								<div class="col-xs-12">
+									<strong>Diagnosis Codes: </strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="step3-container" class="disabled">
+					<div class="header-container">
+						<h2>Step 3</h2>
+						<div>Test Requisition</div>
+					</div>
+					<div class="step-card step1-card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-xs-12">
+								</div>
+								<div class="col-xs-12">
+								</div>
+								<div class="col-xs-12">
+								</div>
+								<div class="col-xs-12">
+								</div>
+								<div class="col-xs-12">
+								</div>
+								<div class="col-xs-12">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-9">
+			<div class="row">
+				<div class="col-xs-2 col-xs-offset-10">
+					<a href="/orders.html" class="btn btn-info save-and-quit-button">Save and Quit</a>
+				</div>
+			</div>
+			<form>
+				<div class="row">
+					<div class="col-xs-12 green-box-container">
+						<div class="green-box-header clearfix">
+							<div class="title pull-left">
+								<strong class="title-text">&nbsp;Specimen Information</strong></i>
+							</div>
+							<div class="info pull-right">
+								<i class="fa fa-question-circle"></i>
+							</div>
+						</div>
+						<div class="green-box-body">
+							<div class="row">
+								<div class="col-xs-2 col-xs-offset-10">Required <span class="red">*</span></div>
+							</div>
+							<div class="row">
+							  <div class="col-xs-4 form-group">
+							    <label for="specimenId">Specimen ID <span class="red">*</span></label>
+							    <div class="input-group">
+								  <span class="input-group-addon">SCAN</span>
+								  <input type="text" class="form-control">
+								</div>
+							  </div>
+							</div>
+							<div class="row">
+								<div class="col-xs-2 form-group">
+							    <label for="specimenType">Specimen Type&nbsp;<span class="red">*</span></label><br/>
+							    <input type="radio">&nbsp;Urine</input><br/>
+							    <input type="radio">&nbsp;Oral Fluid</input><br/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4 form-group">
+							    <label for="dateCollected">Date Collected&nbsp;<span class="red">*</span></label><br/>
+							    <input type="text" id="datepicker">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3 form-group">
+							    <label for="ssn">Time Collected</label>
+							    <input type="text" class="form-control" id="timeCollected">
+							    <input type="radio">&nbsp;AM</input>
+							    <input type="radio">&nbsp;PM</input>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 form-group">
+							    <label for="dob">Temperature Check&nbsp;<span class="red">*</span></label>
+							    <p>Temperature read within 4 minutes and is in range of 32.5 - 37.7 Celsius (90.5 - 99.8 degrees Fahrenheit) <i class="fa fa-question-circle"></i></p>
+							    <input type="radio">&nbsp;Yes</input><br/>
+							    <input type="radio">&nbsp;No</input><br/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-2 form-group">
+							    <label for="profileType">Profile Type&nbsp;<span class="red">*</span></label><br/>
+							    <input type="radio">&nbsp;POC Device</input><br/>
+							    <input type="radio">&nbsp;No POC</input><br/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-2 form-group">
+							    <label for="pocDeviceType">POC Device Type&nbsp;<span class="red">*</span></label><br/>
+								    <form class="filter-form">
+								      <div class="form-group">
+								        <select>
+								          <option>11/12/13 - Panel Cup</option>
+								          <option>11/12/13 - Panel Cup</option>
+								          <option>11/12/13 - Panel Cup</option>
+								        </select>
+								      </div>
+								    </form>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4 form-group">
+							    <label for="diagnosisCodes">Diagnosis Codes&nbsp;<span class="red">*</span></label><br/>
+							    <input type="text" class="form-control" id="diagnosisCodes">
+							    <h6>If multiple diagnosis codes, seperate by a comma.</h6>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-3 form-group">
+							    <label for="authorizationLanguage">Authorization Languaage&nbsp;</label><br/>
+							    <input type="radio">&nbsp;English</input><br/>
+							    <input type="radio">&nbsp;Spanish</input><br/>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-5">
+								<a href="/step3.html" class="btn btn-info save-and-quit-button-2">Save and Continue</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
 </div>
     <!-- jQuery -->
     <script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>

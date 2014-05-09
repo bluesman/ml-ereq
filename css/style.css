@@ -7604,3 +7604,117 @@ select {
   min-height: 100px;
   margin-bottom: 20px;
 }
+.step2-page .practice-container {
+  padding: 10px;
+  color: #999999;
+}
+.step2-page .steps-container .disabled .header-container {
+  color: #cccccc;
+}
+.step2-page .steps-container .disabled .header-container h2 {
+  color: #d6f5d6;
+}
+.step2-page .steps-container .disabled .card-body {
+  background-color: #e6e6e6;
+  color: #999999;
+}
+.step2-page .steps-container #step1-container,
+.step2-page .steps-container #step2-container,
+.step2-page .steps-container #step3-container {
+  margin-bottom: 40px;
+}
+.step2-page .steps-container .header-container {
+  color: #999999;
+}
+.step2-page .steps-container .header-container h2 {
+  color: #33cc33;
+  font-size: 24px;
+  margin: 10px 0px 2px 0px;
+}
+.step2-page .steps-container .card-body {
+  border-radius: 4px;
+  border: 2px dashed #999999;
+  background-color: #cccccc;
+  color: #333333;
+  padding: 10px;
+  min-height: 150px;
+}
+.step2-page .save-and-quit-button {
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+.step2-page .retrieve-button {
+  margin-top: 25px;
+}
+.step2-page .green-box-container .green-box-header {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #adebad;
+  color: #145214;
+}
+.step2-page .green-box-container .green-box-header .title-text {
+  color: #333333;
+}
+.step2-page .green-box-container .green-box-body {
+  padding: 10px 10px 10px 30px;
+  background-color: #cccccc;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+.step3-page .practice-container {
+  padding: 10px;
+  color: #999999;
+}
+.step3-page .steps-container .disabled .header-container {
+  color: #cccccc;
+}
+.step3-page .steps-container .disabled .header-container h2 {
+  color: #d6f5d6;
+}
+.step3-page .steps-container .disabled .card-body {
+  background-color: #e6e6e6;
+  color: #999999;
+}
+.step3-page .steps-container #step1-container,
+.step3-page .steps-container #step2-container,
+.step3-page .steps-container #step3-container {
+  margin-bottom: 40px;
+}
+.step3-page .steps-container .header-container {
+  color: #999999;
+}
+.step3-page .steps-container .header-container h2 {
+  color: #33cc33;
+  font-size: 24px;
+  margin: 10px 0px 2px 0px;
+}
+.step3-page .steps-container .card-body {
+  border-radius: 4px;
+  border: 2px dashed #999999;
+  background-color: #cccccc;
+  color: #333333;
+  padding: 10px;
+  min-height: 150px;
+}
+.step3-page .save-and-quit-button {
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+.step3-page .retrieve-button {
+  margin-top: 25px;
+}
+.step3-page .green-box-container .green-box-header {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #adebad;
+  color: #145214;
+}
+.step3-page .green-box-container .green-box-header .title-text {
+  color: #333333;
+}
+.step3-page .green-box-container .green-box-body {
+  padding: 10px 10px 10px 30px;
+  background-color: #cccccc;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
