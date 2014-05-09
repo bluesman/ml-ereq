@@ -58,14 +58,15 @@ $(document).ready(function(){
 	for (var i = 11; i >= 0; i--) {
 		var key1 = '#ins-providers-'+i;
 		var key2 = '#medications-'+i;
-
-		$(key1).popover({
-			trigger:'hover',
-			title:'Insurance Providers',
-			html:true,
-			content:'<ul class="popover-list"><li>Provider 1</li><li>Providers 2</li></ul><div><a href="/step1" class="btn btn-success pull-right">Edit</a></div>',
-			placement:'top',
-		});
+		if (typeof $(key1) !== "undefined") {
+			$(key1).popover({
+				trigger:'hover',
+				title:'Insurance Providers',
+				html:true,
+				content:'<ul class="popover-list"><li>Provider 1</li><li>Providers 2</li></ul><div><a href="/step1" class="btn btn-success pull-right">Edit</a></div>',
+				placement:'top',
+			});
+		}
 
 		$(key2).popover({
 			trigger:'hover',
