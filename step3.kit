@@ -53,12 +53,28 @@
 									</div>
 								</div>
 								<div class="col-xs-12">
+									<div id="requesting-provider-bubble" class="step3-bubble clearfix">
+										<i class="fa fa-circle-o fa-2x pull-left"></i>
+										<div class="step3-bubble-text pull-left">Point-Of-Care Results<br/>&amp; Order Tests</div>
+									</div>
 								</div>
 								<div class="col-xs-12">
+									<div id="requesting-provider-bubble" class="step3-bubble clearfix">
+										<i class="fa fa-circle-o fa-2x pull-left"></i>
+										<div class="step3-bubble-text pull-left">Order Tests Not On POC Device</div>
+									</div>
 								</div>
 								<div class="col-xs-12">
+									<div id="requesting-provider-bubble" class="step3-bubble clearfix">
+										<i class="fa fa-circle-o fa-2x pull-left"></i>
+										<div class="step3-bubble-text pull-left">Order Sepcimen Validity Testing</div>
+									</div>
 								</div>
 								<div class="col-xs-12">
+									<div id="requesting-provider-bubble" class="step3-bubble clearfix">
+										<i class="fa fa-circle-o fa-2x pull-left"></i>
+										<div class="step3-bubble-text pull-left">Order Confirmation</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -68,7 +84,10 @@
 		</div>
 		<div class="col-xs-9">
 			<div class="row">
-				<div class="col-xs-2 col-xs-offset-10">
+				<div class="col-xs-10">
+					<h6>Specimen ID: <span style="color:red;">H0121001</span></h6>
+				</div>
+				<div class="col-xs-2">
 					<a href="/orders.html" class="btn btn-info save-and-quit-button">Save and Quit</a>
 				</div>
 			</div>
@@ -77,7 +96,7 @@
 					<div class="col-xs-12 green-box-container">
 						<div class="green-box-header clearfix">
 							<div class="title pull-left">
-								<strong class="title-text">&nbsp;Specimen Information</strong></i>
+								<strong class="title-text">&nbsp;Requesting Provider</strong></i>
 							</div>
 							<div class="info pull-right">
 								<i class="fa fa-question-circle"></i>
@@ -85,84 +104,131 @@
 						</div>
 						<div class="green-box-body">
 							<div class="row">
-								<div class="col-xs-2 col-xs-offset-10">Required <span class="red">*</span></div>
-							</div>
-							<div class="row">
-							  <div class="col-xs-4 form-group">
-							    <label for="specimenId">Specimen ID <span class="red">*</span></label>
-							    <div class="input-group">
-								  <span class="input-group-addon">SCAN</span>
-								  <input type="text" class="form-control">
-								</div>
-							  </div>
-							</div>
-							<div class="row">
-								<div class="col-xs-2 form-group">
-							    <label for="specimenType">Specimen Type&nbsp;<span class="red">*</span></label><br/>
-							    <input type="radio">&nbsp;Urine</input><br/>
-							    <input type="radio">&nbsp;Oral Fluid</input><br/>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-4 form-group">
-							    <label for="dateCollected">Date Collected&nbsp;<span class="red">*</span></label><br/>
-							    <input type="text" id="datepicker">
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-3 form-group">
-							    <label for="ssn">Time Collected</label>
-							    <input type="text" class="form-control" id="timeCollected">
-							    <input type="radio">&nbsp;AM</input>
-							    <input type="radio">&nbsp;PM</input>
-								</div>
-							</div>
-							<div class="row">
 								<div class="col-xs-12 form-group">
-							    <label for="dob">Temperature Check&nbsp;<span class="red">*</span></label>
-							    <p>Temperature read within 4 minutes and is in range of 32.5 - 37.7 Celsius (90.5 - 99.8 degrees Fahrenheit) <i class="fa fa-question-circle"></i></p>
-							    <input type="radio">&nbsp;Yes</input><br/>
-							    <input type="radio">&nbsp;No</input><br/>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-2 form-group">
-							    <label for="profileType">Profile Type&nbsp;<span class="red">*</span></label><br/>
-							    <input type="radio">&nbsp;POC Device</input><br/>
-							    <input type="radio">&nbsp;No POC</input><br/>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-2 form-group">
-							    <label for="pocDeviceType">POC Device Type&nbsp;<span class="red">*</span></label><br/>
+							    <label for="pocDeviceType">Please chose the requesting provider</label><br/>
 								    <form class="filter-form">
 								      <div class="form-group">
 								        <select>
-								          <option>11/12/13 - Panel Cup</option>
-								          <option>11/12/13 - Panel Cup</option>
-								          <option>11/12/13 - Panel Cup</option>
+								        	<option>-</option>
+								        	<option>Provider ABC</option>
+								        	<option>Provider DEF</option>
+								          	<option>Provider GHI</option>
 								        </select>
 								      </div>
 								    </form>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-4 form-group">
-							    <label for="diagnosisCodes">Diagnosis Codes&nbsp;<span class="red">*</span></label><br/>
-							    <input type="text" class="form-control" id="diagnosisCodes">
-							    <h6>If multiple diagnosis codes, seperate by a comma.</h6>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-3 form-group">
-							    <label for="authorizationLanguage">Authorization Languaage&nbsp;</label><br/>
-							    <input type="radio">&nbsp;English</input><br/>
-							    <input type="radio">&nbsp;Spanish</input><br/>
+								    <p>If the requesting provider is not listed please call Customer Service ar 123.456.7890</p>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-xs-5">
+					</div>
+					<div class="col-xs-12 green-box-container">
+						<div class="green-box-header clearfix">
+							<div class="title pull-left">
+								<strong class="title-text">&nbsp;Custom Profile</strong></i>
+							</div>
+							<div class="info pull-right">
+								<i class="fa fa-question-circle"></i>
+							</div>
+						</div>
+						<div class="green-box-body">
+							<div class="row">
+								<div class="col-xs-12 form-group">
+							    <label class="col-xs-8">You must select an option below, if you have not established a custom profile, Milennium Laboratories will perform tests as orders below.</label><br/>
+									<div class="col-xs-12 form-group">
+									    <input type="radio">&nbsp;<strong>Do Not Use Custom Profile</strong></input><br/>
+									    <input type="radio">&nbsp;<strong>Use Custom Profile</strong> and Perform additional tests</input>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 green-box-container">
+						<div class="green-box-header clearfix">
+							<div class="title pull-left">
+								<strong class="title-text">&nbsp;Record Point-Of-Care Results and Order Tests</strong></i>
+							</div>
+							<div class="info pull-right">
+								<i class="fa fa-question-circle"></i>
+							</div>
+						</div>
+						<div class="green-box-body">
+							<div class="row">
+								<p><strong>NOTE</strong>: If Point-Of-Care result is NOT marked, it will default to a Negative (-) result.</p>
+								<div class="col-xs-12 form-group">
+							    <table class="table">
+							    	<thead>
+							    		<tr>
+							    			<th class="col-xs-6">Medication or Drug</th>
+							    			<th class="col-xs-1">Pos <i class="fa fa-plus-square-o"></i></th>
+							    			<th class="col-xs-1">Neg <i class="fa fa-minus-square-o"></i></th>
+							    			<th class="col-xs-4">Confirm Results (1)</th>
+							    		</tr>
+							    	</thead>
+							    	<tbody>
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/positive-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    		<!-- @import includes/negative-row -->
+							    	</tbody>
+							    </table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 green-box-container">
+					<div class="green-box-header clearfix">
+							<div class="title pull-left">
+								<strong class="title-text">&nbsp;Order Tests Not On POC Device</strong></i>
+							</div>
+							<div class="info pull-right">
+								<i class="fa fa-question-circle"></i>
+							</div>
+						</div>
+						<div class="green-box-body">
+							<div class="row">
+								<div class="col-xs-12 form-group">
+							    <table class="table">
+							    	<thead>
+							    		<tr>
+							    			<th class="col-xs-5">Medication or Drug</th>
+							    			<th class="col-xs-2">(9)<br/>Ic-ms/ms Test</th>
+							    			<th class="col-xs-1">(10)<br/>Immunoassay Test</th>
+							    			<th class="col-xs-2">(1)(11)<br/>Confirm<br/>+ Results</th>
+							    			<th class="col-xs-2">(11)(12)<br/>Confirm<br/>- Results</th>
+							    		</tr>
+							    	</thead>
+							    	<tbody>
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    		<!-- @import includes/order-test-row -->
+							    	</tbody>
+							    </table>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-5">
 								<a href="/step3.html" class="btn btn-info save-and-quit-button">Save and Continue</a>
 							</div>
 						</div>
