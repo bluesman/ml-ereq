@@ -7120,6 +7120,12 @@ button.close {
 .red {
   color: #cc3300;
 }
+a {
+  color: #0000ff;
+}
+a:hover {
+  color: #0000cc;
+}
 .popover-content ul.popover-list {
   border-radius: 3px;
   padding: 0px;
@@ -7132,12 +7138,85 @@ button.close {
 .popover-link:hover {
   text-decoration: none;
 }
+h1 {
+  font-size: 20px;
+  margin: 0px;
+}
+h1 a {
+  color: #999999;
+}
+p {
+  margin: 0px;
+}
+.pagination-controls-container .page-range {
+  width: 50px;
+  text-align: center;
+}
+.pagination-controls-container .arrows {
+  width: 75px;
+  text-align: center;
+}
+.pagination-controls-container .arrows a {
+  background-color: #cccccc;
+  border-radius: 3px;
+  padding: 4px 10px;
+  color: #999999;
+}
+.pagination-controls-container > div {
+  line-height: 30px;
+  vertical-align: middle;
+}
+.form-select-container {
+  min-width: 200px;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border-radius: 3px;
+  position: relative;
+}
+.form-select-container select {
+  width: 100%;
+  background: transparent;
+  padding: 5px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.form-select-container i {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #cccccc;
+  font-size: 20px;
+}
 .page-body-container {
   padding: 20px;
 }
-.page-body-container h1 {
-  font-size: 20px;
-  margin: 10px 0;
+.page-body-container .required-col {
+  text-align: right;
+}
+.page-body-container .green-box-container .green-box-header {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #adebad;
+  color: #145214;
+}
+.page-body-container .green-box-container .green-box-header .title-text {
+  color: #333333;
+}
+.page-body-container .green-box-container .green-box-body {
+  padding: 10px 10px 10px 30px;
+  background-color: #cccccc;
+  min-height: 100px;
+  margin-bottom: 20px;
+}
+.page-body-container .green-box-dark .green-box-header {
+  background-color: #33cc33 !important;
+}
+.page-body-container .green-box-dark .green-box-body-dark {
+  background-color: #adebad !important;
 }
 /* Your site specific LESS variables - these override BS defaults  */
 .navbar {
@@ -7179,135 +7258,258 @@ button.close {
   background-color: #ffffff;
   margin: 6px 4px;
 }
-.red-border {
-  border-left: solid;
-  width: 5px;
-  color: red;
+.orders-page {
+  padding-top: 30px;
 }
-.note {
-  font-size: 10px;
+.orders-page .orders-page-left .head-row h1,
+.orders-page .orders-page-left .head-row p {
+  line-height: 30px;
+}
+.orders-page .orders-page-left .note {
   color: #cccccc;
-}
-.head-row {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-.orders {
-  margin: 0;
-}
-.note {
-  margin-top: 20px;
-}
-.practices {
-  margin-top: 10px;
-}
-select {
-  width: 160px;
-  background: transparent;
-  padding: 5px;
   font-size: 12px;
-  border: 0;
-  border-radius: 0;
-  height: 24px;
-  -webkit-appearance: none;
+  line-height: 30px;
 }
-.pagation {
-  margin-top: 20px;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container {
+  border: 1px solid #cccccc;
+  background-color: #f2f2f2;
+  margin: 20px 0 30px 0;
 }
-.arrows {
-  margin-top: 20px;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-status-col {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 50px;
+  color: #555555;
 }
-.change-page {
-  width: 40px;
-  background-color: #cccccc;
-  border-radius: 5px;
-  color: #999999;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-status-col .order-icon {
+  font-size: 24px;
+  padding: 5px;
+  color: #555555;
+}
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-status-col .order-info .order-created-date,
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-status-col .order-info .order-sent-date {
   font-size: 10px;
 }
-.filter {
-  background-color: #999999;
-  color: white;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-status-col .order-specimen-status,
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-status-col .order-specimen-id,
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-status-col .order-requesting-provider {
+  font-size: 12px;
+  padding-top: 2px;
 }
-.order-info {
-  background-color: #f7f7f7;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-top: solid #cccccc 2px;
-  border-bottom: solid #cccccc 2px;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-status-col > div {
+  padding: 0px 10px;
 }
-.order-red {
-  border-left: solid #cc3300 10px;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col {
+  padding: 20px;
+  position: relative;
 }
-.order-orange {
-  border-left: solid #ff9933 10px;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .order-image {
+  border: thin solid #999999;
+  height: 100px;
+  width: 80px;
+  margin: auto;
 }
-.order-green {
-  border-left: solid #33cc33 10px;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .test-name {
+  font-size: 18px;
 }
-.order-gray {
-  border-left: solid #999999 10px;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .patient-name {
+  font-size: 22px;
 }
-.order-btn {
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .patient-name a {
+  position: relative;
+  margin-left: 20px;
+}
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .patient-name a i {
+  font-size: 14px;
+  color: #999999;
+  border: thin solid #999999;
+  border-radius: 3px;
+  padding: 4px;
+  position: absolute;
+  top: 2px;
+  right: -12px;
+}
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .order-buttons {
+  margin-right: 20px;
+}
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .order-buttons .order-btn {
   margin-top: 5px;
   margin-bottom: 5px;
+  text-align: right;
 }
-.order-btn:hover {
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .order-buttons .order-btn a {
+  font-size: 12px;
+  padding: 4px 12px;
+  min-width: 100px;
+}
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .order-buttons .order-btn a:hover {
   background-color: #ff9933;
-  border: #ff9933;
+  border: thin solid #ff9933;
 }
-.new-order-btn {
-  margin-top: 50px;
-  margin-bottom: 35px;
-  margin-left: 50px;
-  background-color: #ff9933;
-  border: #ff9933;
+.orders-page .orders-page-left #orders-page-list .orders-list-row-container .order-controls-col .entered-by {
+  color: #999999;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0px;
+  right: 60px;
 }
-.sidebar {
-  background-color: #cccccc;
-}
-.sidebar-content-1 {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-bottom: solid white 1px;
-}
-.sidebar-content-2 {
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.sidebar-link {
-  color: DarkBlue;
-  text-decoration: underline;
-}
-.icon {
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-.info {
-  margin: 0;
-}
-.modal-body {
+.orders-page .orders-page-left #orders-page-list .modal-body {
   margin-bottom: 25px;
 }
-.reopen-modal {
+.orders-page .orders-page-left #orders-page-list .modal-body .reopen-modal {
   background-color: lightgreen;
   border: solid #33cc33 2px;
 }
-.fa-pencil-square-o {
+.orders-page .orders-page-left #orders-page-table table {
+  border-top: thin solid #cccccc;
+  border-bottom: thin solid #cccccc;
+}
+.orders-page .orders-page-left #orders-page-table table th,
+.orders-page .orders-page-left #orders-page-table table td {
+  border-left: thin solid #cccccc;
+}
+.orders-page .orders-page-left #orders-page-table table th.first {
+  text-align: center;
+}
+.orders-page .orders-page-left #orders-page-table table th.last {
+  width: 200px;
+  border-right: thin solid #cccccc;
+}
+.orders-page .orders-page-left #orders-page-table table td.last {
+  border-right: thin solid #cccccc;
+}
+.orders-page .orders-page-left #orders-page-table table .edit-btn {
+  width: 40%;
+  margin-right: 20px;
+}
+.orders-page .orders-page-left #orders-page-table table .cancel-btn {
+  width: 40%;
+}
+.orders-page .orders-page-left #orders-page-table .preview {
+  text-align: center;
+}
+.orders-page .orders-page-left #orders-page-table .preview a {
+  font-size: 20px;
+  color: #555555;
+}
+.orders-page .orders-page-left .RECEIVED.Order.Not.Sent .order-status-col {
+  border-right: 10px solid #cc3300;
+}
+.orders-page .orders-page-left .RECEIVED.Order.Not.Sent .order-specimen-status-value {
+  color: #cc3300;
+}
+.orders-page .orders-page-left .RECEIVED.Order.Not.Sent .reopen-btn {
+  display: none;
+}
+.orders-page .orders-page-left .RECEIVED.Order.Not.Sent .send-btn {
+  display: block;
+}
+.orders-page .orders-page-left .RECEIVED.Order.Not.Sent .edit-btn {
+  display: block;
+}
+.orders-page .orders-page-left .RECEIVED.Order.Not.Sent .cancel-btn {
+  display: block;
+}
+.orders-page .orders-page-left .RECEIVED .order-status-col {
+  border-right: 10px solid #33cc33;
+}
+.orders-page .orders-page-left .RECEIVED .order-specimen-status-value {
   color: #33cc33;
 }
-.edit-order {
-  background-color: #33cc33;
-  border-color: #33cc33;
-  color: white;
+.orders-page .orders-page-left .RECEIVED .reopen-btn {
+  display: none;
 }
-.preview {
-  color: black;
-  text-decoration: none;
+.orders-page .orders-page-left .RECEIVED .send-btn {
+  display: none;
 }
-.status {
-  border-right: solid #cc3300 10px;
+.orders-page .orders-page-left .RECEIVED .edit-btn {
+  display: none;
+}
+.orders-page .orders-page-left .RECEIVED .cancel-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED .order-status-col {
+  border-right: 10px solid #ff9933;
+}
+.orders-page .orders-page-left .NOT.RECEIVED .order-specimen-status-value {
+  color: #ff9933;
+}
+.orders-page .orders-page-left .NOT.RECEIVED .reopen-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED .send-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED .edit-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED .cancel-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Not.Sent .order-status-col {
+  border-right: 10px solid #ff9933;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Not.Sent .order-specimen-status-value {
+  color: #ff9933;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Not.Sent .reopen-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Not.Sent .send-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Not.Sent .edit-btn {
+  display: block;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Not.Sent .cancel-btn {
+  display: block;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Canceled .order-status-col {
+  border-right: 10px solid #555555;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Canceled .order-specimen-status-value {
+  color: #555555;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Canceled .reopen-btn {
+  display: block;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Canceled .send-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Canceled .edit-btn {
+  display: none;
+}
+.orders-page .orders-page-left .NOT.RECEIVED.Order.Canceled .cancel-btn {
+  display: none;
+}
+.orders-page .orders-page-right .new-order-btn-container {
+  text-align: center;
+}
+.orders-page .orders-page-right .new-order-btn-container .new-order-btn {
+  width: 75%;
+  margin-bottom: 40px;
+}
+.orders-page .orders-page-right .sidebar {
+  background-color: #cccccc;
+}
+.orders-page .orders-page-right .sidebar .sidebar-content-1 {
+  padding: 20px;
+}
+.orders-page .orders-page-right .sidebar .sidebar-content-1 h3 {
+  margin-top: 0;
+}
+.orders-page .orders-page-right .sidebar .sidebar-divider {
+  border-bottom: 1px solid #ffffff;
+}
+.orders-page .orders-page-right .sidebar .sidebar-content-2 {
+  padding: 20px;
+}
+.orders-page .orders-page-right .sidebar .sidebar-content-2 .row {
+  margin-bottom: 10px;
+}
+.orders-page .orders-page-right .sidebar .sidebar-content-2 .icon-container {
+  text-align: center;
+  color: #555555;
 }
 .navbar-patients {
   background-color: #cccccc;
@@ -7327,25 +7529,6 @@ select {
 }
 .navbar-patients .filter-form {
   margin: 5px 35px 5px 0px !important;
-}
-.navbar-patients .filter-form .form-group {
-  height: 24px;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #ffffff;
-}
-.navbar-patients .filter-form .form-group select {
-  width: 160px;
-  background: transparent;
-  padding: 5px;
-  font-size: 12px;
-  border: 0;
-  border-radius: 0;
-  height: 24px;
-  -webkit-appearance: none;
-}
-.navbar-patients .filter-form .form-group i {
-  margin-left: -15px;
 }
 .navbar-patients .navbar-nav .active {
   background-color: #999999;
@@ -7367,12 +7550,6 @@ select {
   padding-top: 7px;
   padding-bottom: 7px;
   line-height: 20px;
-}
-.patients-page-body-container h1 {
-  padding: 0px 15px;
-}
-.patients-page-body-container h1 a {
-  color: #999999;
 }
 .patients-page-body-container .row {
   margin-top: 30px;
@@ -7498,11 +7675,22 @@ select {
   top: 7px;
   right: 4px;
 }
+.step1-page #noInsurance {
+  margin-left: 0px;
+}
+.step1-page .insurance-list > .row {
+  margin-bottom: 20px;
+}
+.step1-page .insurance-list .insurance-number {
+  padding: 80px 10px;
+  font-size: 22px;
+}
 .step1-page .insurance-list .insurance-container {
   border-radius: 4px;
   border: thin dashed #555555;
   padding: 10px;
   font-size: 12px;
+  min-height: 214px;
 }
 .step1-page .insurance-list .insurance-container .insurance-number {
   font-size: 24px;
@@ -7589,21 +7777,6 @@ select {
 .step1-page .retrieve-button {
   margin-top: 25px;
 }
-.step1-page .green-box-container .green-box-header {
-  font-size: 18px;
-  padding: 10px;
-  background-color: #adebad;
-  color: #145214;
-}
-.step1-page .green-box-container .green-box-header .title-text {
-  color: #333333;
-}
-.step1-page .green-box-container .green-box-body {
-  padding: 10px 10px 10px 30px;
-  background-color: #cccccc;
-  min-height: 100px;
-  margin-bottom: 20px;
-}
 .step2-page .practice-container {
   padding: 10px;
   color: #999999;
@@ -7646,21 +7819,6 @@ select {
 .step2-page .retrieve-button {
   margin-top: 25px;
 }
-.step2-page .green-box-container .green-box-header {
-  font-size: 18px;
-  padding: 10px;
-  background-color: #adebad;
-  color: #145214;
-}
-.step2-page .green-box-container .green-box-header .title-text {
-  color: #333333;
-}
-.step2-page .green-box-container .green-box-body {
-  padding: 10px 10px 10px 30px;
-  background-color: #cccccc;
-  min-height: 100px;
-  margin-bottom: 20px;
-}
 .step3-page .practice-container {
   padding: 10px;
   color: #999999;
@@ -7681,12 +7839,12 @@ select {
   color: #33cc33;
 }
 .step3-page .steps-container #step3-container .step3-body .step3-bubble .fa-circle-o {
-  color: #999999;
+  color: #555555;
 }
 .step3-page .steps-container #step3-container .step3-body .step3-bubble .step3-bubble-text {
   line-height: 30px;
   vertical-align: middle;
-  color: #999999;
+  color: #555555;
 }
 .step3-page .steps-container .header-container {
   color: #999999;
@@ -7720,21 +7878,6 @@ select {
 }
 .step3-page .retrieve-button {
   margin-top: 25px;
-}
-.step3-page .green-box-container .green-box-header {
-  font-size: 18px;
-  padding: 10px;
-  background-color: #adebad;
-  color: #145214;
-}
-.step3-page .green-box-container .green-box-header .title-text {
-  color: #333333;
-}
-.step3-page .green-box-container .green-box-body {
-  padding: 10px 10px 10px 30px;
-  background-color: #cccccc;
-  min-height: 100px;
-  margin-bottom: 20px;
 }
 .step3-page .send-order-btn {
   margin-bottom: 35px;

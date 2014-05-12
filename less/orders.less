@@ -1,164 +1,300 @@
-.red-border {
-	border-left: solid;
-	width: 5px;
-	color: red;
-}
+.orders-page {
+	padding-top:30px;
 
-.note {
-	font-size: 10px;
-	color: @gray-lighter;
-}
+	.orders-page-left {
 
-.head-row {
-	margin-top: 30px;
-	margin-bottom: 10px;
-}
+		.head-row {
+			h1, p {
+				line-height:30px;
+			}
+		}
 
-	.orders {
-		margin: 0;
-	}
+		.note {
+			color:@gray-lighter;
+			font-size:12px;
+			line-height: 30px;
+		}
 
-	.note {
-		margin-top: 20px;
-	}
+		#orders-page-list {
+			.orders-list-row-container {
+				border:1px solid @gray-lighter;
+				background-color: lighten(@gray-lighter,15%);
+				margin: 20px 0 30px 0;
+				.order-status-col {
+					padding-top:10px;
+					padding-bottom:10px;
+					min-height: 50px;
+					color:@gray;
 
-	.practices {
-		margin-top: 10px;
-	}
+					.order-icon {
+						font-size:24px;
+						padding:5px;
+						color:@gray;
+					}
 
-	select {
-		    width:160px;
-				background: transparent;
-			  padding: 5px;
-			  font-size: 12px;
-			  border: 0;
-			  border-radius: 0;
-			  height: 24px;
-			  -webkit-appearance: none;
+					.order-info {
+						.order-created-date, .order-sent-date {
+							font-size:10px;
+						}
+					}
+
+					.order-specimen-status, .order-specimen-id, .order-requesting-provider {
+						font-size:12px;
+						padding-top:2px;
+					}
+
+				}
+
+				.order-status-col > div {
+					padding:0px 10px;
+				}
+
+				.order-controls-col {
+					padding:20px;
+					position:relative;
+
+					.order-image {
+						border:thin solid @gray-light;
+						height:100px;
+						width:80px;
+						margin:auto;
+					}
+					.test-name {
+						font-size:18px;
+					}
+					.patient-name {
+						font-size:22px;
+						a {
+							position:relative;
+							margin-left:20px;
+							i {
+								font-size:14px;
+								color:@gray-light;
+								border: thin solid @gray-light;
+								border-radius: 3px;
+								padding:4px;
+								position: absolute;
+								top:2px;
+								right:-12px;
+							}
+						}
+					}
+					.order-buttons {
+						margin-right:20px;
+						.order-btn {
+							margin-top: 5px;
+							margin-bottom: 5px;
+							text-align:right;
+
+
+							a {
+								font-size:12px;
+								padding:4px 12px;
+								min-width: 100px;
+							}
+							a:hover {
+						 		background-color: @brand-warning;
+						 		border: thin solid @brand-warning;
+							}
+						}
+					}
+					.entered-by {
+						color:@gray-light;
+						font-size:12px;
+						position:absolute;
+						bottom:0px;
+						right:60px;
+					}
+				}
 			}
 
-	.pagation {
-		margin-top: 20px;
+			.modal-body {
+				margin-bottom: 25px;
+
+				.reopen-modal {
+					background-color: lightgreen;
+					border: solid @brand-success 2px;
+				}
+			}
+		}
+
+		#orders-page-table {
+			table {
+				border-top: thin solid @gray-lighter;
+				border-bottom: thin solid @gray-lighter;
+
+				th,td {
+					border-left:thin solid @gray-lighter;
+				}
+
+				th.first {
+					text-align:center;
+				}
+				th.last {
+					width:200px;
+					border-right:thin solid @gray-lighter;
+				}
+				td.last {
+					border-right:thin solid @gray-lighter;
+				}
+				.edit-btn {
+					width:40%;
+					margin-right:20px;
+				}
+				.cancel-btn {
+					width:40%;
+				}
+
+			}
+			.preview {
+				text-align:center;
+				a {
+					font-size: 20px;
+					color:@gray;
+				}
+			}
+
+		}
+
+		.RECEIVED.Order.Not.Sent {
+			.order-status-col {
+				border-right:10px solid @brand-danger;
+			}
+			.order-specimen-status-value {
+				color:@brand-danger;
+			}
+			.reopen-btn {
+				display:none;
+			}
+			.send-btn {
+				display:block;
+			}
+			.edit-btn {
+				display:block;
+			}
+			.cancel-btn {
+				display:block;
+			}
+		}
+		.RECEIVED {
+			.order-status-col {
+				border-right:10px solid @brand-success;
+			}
+			.order-specimen-status-value {
+				color:@brand-success;
+			}
+			.reopen-btn {
+				display:none;
+			}
+			.send-btn {
+				display:none;
+			}
+			.edit-btn {
+				display:none;
+			}
+			.cancel-btn {
+				display:none;
+			}
+		}
+		.NOT.RECEIVED {
+			.order-status-col {
+				border-right:10px solid @brand-warning;
+			}
+			.order-specimen-status-value {
+				color:@brand-warning;
+			}
+			.reopen-btn {
+				display:none;
+			}
+			.send-btn {
+				display:none;
+			}
+			.edit-btn {
+				display:none;
+			}
+			.cancel-btn {
+				display:none;
+			}
+		}
+		.NOT.RECEIVED.Order.Not.Sent {
+			.order-status-col {
+				border-right:10px solid @brand-warning;
+			}
+			.order-specimen-status-value {
+				color:@brand-warning;
+			}
+			.reopen-btn {
+				display:none;
+			}
+			.send-btn {
+				display:none;
+			}
+			.edit-btn {
+				display:block;
+			}
+			.cancel-btn {
+				display:block;
+			}
+		}
+		.NOT.RECEIVED.Order.Canceled {
+			.order-status-col {
+				border-right:10px solid @gray;
+			}
+			.order-specimen-status-value {
+				color:@gray;
+			}
+			.reopen-btn {
+				display:block;
+			}
+			.send-btn {
+				display:none;
+			}
+			.edit-btn {
+				display:none;
+			}
+			.cancel-btn {
+				display:none;
+			}
+		}
 	}
 
-	.arrows {
-		margin-top: 20px;
-	}
+	.orders-page-right {
 
-		.change-page {
-			width: 40px;
+		.new-order-btn-container {
+			text-align: center;
+
+			.new-order-btn {
+				width:75%;
+				margin-bottom: 40px;
+			}
+		}
+
+		.sidebar {
 			background-color: @gray-lighter;
-			border-radius: 5px;
-			color: @gray-light;
-			font-size: 10px;
+
+			.sidebar-content-1 {
+				padding:20px;
+				h3 {
+					margin-top:0;
+				}
+			}
+
+			.sidebar-divider {
+				border-bottom:1px solid @white;
+
+			}
+
+			.sidebar-content-2 {
+				padding:20px;
+				.row {
+					margin-bottom: 10px;
+				}
+
+				.icon-container {
+					text-align:center;
+					color:@gray;
+				}
+			}
 		}
-
-.filter {
-	background-color: @gray-light;
-	color: white;
-}
-
-.order-info {
-	background-color: #f7f7f7;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border-top: solid @gray-lighter 2px;
-	border-bottom: solid @gray-lighter 2px;
-}
-
-	.order-red {
-		border-left: solid @brand-danger 10px;
 	}
-	.order-orange {
-		border-left: solid @brand-warning 10px;
-	}
-	.order-green {
-		border-left: solid @brand-success 10px;
-	}
-	.order-gray {
-		border-left: solid @gray-light 10px;
-	}
-
-	.order-btn {
-		margin-top: 5px;
-		margin-bottom: 5px;
-	}
-
-	 .order-btn:hover {
-	 	background-color: @brand-warning;
-	 	border: @brand-warning;
-	 }
-
-.new-order-btn {
-	margin-top: 50px;
-	margin-bottom: 35px;
-	margin-left: 50px;
-	background-color: @brand-warning;
-	border: @brand-warning;
 }
-
-.sidebar {
-	background-color: @gray-lighter;
-}
-
-	.sidebar-content-1 {
-		margin-top: 10px;
-		margin-left: 10px;
-		margin-right: 10px;
-		border-bottom: solid white 1px;
-	}
-
-	.sidebar-content-2 {
-		margin-top: 10px;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-
-		.sidebar-link {
-			color: DarkBlue;
-			text-decoration: underline;
-		}
-
-		.icon {
-			margin-top: 5px;
-			margin-bottom: 15px;
-		}
-
-		.info {
-			margin: 0;
-		}
-
-.modal-body {
-	margin-bottom: 25px;
-}
-
-.reopen-modal {
-	background-color: lightgreen;
-	border: solid @brand-success 2px;
-}
-
-.fa-pencil-square-o {
-	color: @brand-success;
-}
-
-.edit-order {
-	background-color: @brand-success;
-	border-color: @brand-success;
-	color: white;
-}
-
-.preview {
-	color: black;
-	text-decoration: none;
-}
-
-.status {
-	border-right: solid @brand-danger 10px;
-}
-
-
-
-
-
-
-

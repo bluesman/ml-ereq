@@ -11,23 +11,18 @@
     <meta name="description" content="XXXXXXXXXX">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--[if ! lte IE 6]><!-->
-			<link rel="stylesheet" href="/css/main.css" charset="utf-8">
-	<!--<![endif]-->
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" href="/css/ie8.css" charset="utf-8">
+		<![endif]-->
 
-	<!--[if lte IE 8]>
-		<link rel="stylesheet" href="/css/ie8.css" charset="utf-8">
-	<![endif]-->
-
-	<!--[if lte IE 6]>
-        <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+		<!--[if lte IE 6]>
+    	<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
     <![endif]-->
 
-		<link rel="stylesheet" href="/css/style.css" charset="utf-8">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
+		<link rel="stylesheet" href="css/style.css" charset="utf-8">
+    <link rel="stylesheet" href="js/jquery-ui.1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
 
-    <script src="/bower_components/sprockets-modernizr/modernizr.js" type="text/javascript" charset="utf-8"></script>
+    <script src="bower_components/sprockets-modernizr/modernizr.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -48,8 +43,8 @@
       <ul class="nav navbar-nav navbar-right">
 				<li class="navbar-text">Hello: <i>Jane Doe</i></li>
 
-        <li class="inactive"><a href="/patients.html"><i class="fa fa-group">&nbsp;Patients</i></a></li>
-        <li class="active"><a href="/orders.html"><i class="fa fa-file-text">&nbsp;Orders</i></a></li>
+        <li class="inactive"><a href="patients.html"><i class="fa fa-group">&nbsp;Patients</i></a></li>
+        <li class="active"><a href="orders.html"><i class="fa fa-file-text">&nbsp;Orders</i></a></li>
         <li><a href="#"><i class="fa fa-cloud-download">&nbsp;Results</i></a></li>
         <li class="vertical-divider"></li>
         <li class="dropdown">
@@ -70,7 +65,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container-fluid steps-page step1-page">
+<div class="container-fluid steps-page step1-page page-body-container">
 	<div class="row">
 		<div class="col-xs-3">
 			<div class="practice-container">
@@ -165,7 +160,7 @@
 					<h3>Create a new patient profile</h3>
 				</div>
 				<div class="col-xs-2 col-xs-offset-2">
-					<a href="/orders.html" class="btn btn-info save-and-quit-button">Save and Quit</a>
+					<a href="orders.html" class="btn btn-info save-and-quit-button">Save and Quit</a>
 				</div>
 			</div>
 			<form>
@@ -181,7 +176,7 @@
 						</div>
 						<div class="green-box-body">
 							<div class="row">
-								<div class="col-xs-2 col-xs-offset-10">Required <span class="red">*</span></div>
+								<div class="col-xs-2 col-xs-offset-10 required-col">Required <span class="red">*</span></div>
 							</div>
 							<div class="row">
 							  <div class="col-xs-4 form-group">
@@ -243,7 +238,7 @@
 						</div>
 						<div class="green-box-body">
 							<div class="row">
-								<div class="col-xs-2 col-xs-offset-10">Required <span class="red">*</span></div>
+								<div class="col-xs-2 col-xs-offset-10 required-col">Required <span class="red">*</span></div>
 							</div>
 							<div class="row">
 								<div class="col-xs-6">
@@ -258,11 +253,11 @@
 									<div class="row">
 										<div class="col-xs-10 form-group">
 									    <label for="isWorkersComp">Is this a worker's compensation claim?</label><br/>
-									    <input type="radio" name="isWorkersComp" value="yes">&nbsp;Yes</input><br/>
-									    <input type="radio" name="isWorkersComp" value="no">&nbsp;No</input><br/>
+									    <input id="workers-comp-yes" type="radio" name="isWorkersComp" value="yes">&nbsp;Yes</input><br/>
+									    <input id="workers-comp-no" type="radio" name="isWorkersComp" value="no">&nbsp;No</input><br/>
 										</div>
 									</div>
-									<div id="workers-comp-questions" class="hidden">
+									<div id="workers-comp-questions" class="hide">
 										<div class="row">
 											<div class="col-xs-6 form-group">
 										    <label for="claimNumber">Claim/Case Number&nbsp;<span class="red">*</span></label>
@@ -291,7 +286,7 @@
 										</div>
 									</div>
 
-									<div id="other-subscriber-questions" class="hidden">
+									<div id="other-subscriber-questions" class="hide">
 										<div class="row">
 											<div class="col-xs-10 form-group">
 										    <label for="subscriber">Subscriber's Name&nbsp;</label>
@@ -374,7 +369,9 @@
 									<div class="row">
 										<div class="col-xs-12">
 											<div class="insurance-row clearfix">
-												<div class="insurance-number col-xs-2">1st</div>
+												<div class="col-xs-2">
+													<div class="insurance-number">1st</div>
+												</div>
 												<div class="insurance-container col-xs-10">
 													<div class="insurance-card clearfix">
 														<div class="insurance-card-move pull-left">
@@ -401,6 +398,28 @@
 															</div>
 														</div>
 													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="insurance-row clearfix">
+												<div class="col-xs-2">
+													<div class="insurance-number">2nd</div>
+												</div>
+												<div class="insurance-container col-xs-10">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="insurance-row clearfix">
+												<div class="col-xs-2">
+													<div class="insurance-number">3rd</div>
+												</div>
+												<div class="insurance-container col-xs-10">
 												</div>
 											</div>
 										</div>
@@ -496,10 +515,10 @@
 				</div>
 				<div class="row form-submit-buttons">
 					<div class="col-xs-2">
-						<a href="/step2.html" class="btn btn-info">Save and Continue</a>
+						<a href="step2.html" class="btn btn-info">Save and Continue</a>
 					</div>
 					<div class="col-xs-4 link-container">
-						<a href="/step1.html" class="add-another-patient">Save and Add Another Patient</a>
+						<a href="step1.html" class="add-another-patient">Save and Add Another Patient</a>
 					</div>
 				</div>
 			</form>
@@ -508,13 +527,12 @@
 
 </div>
     <!-- jQuery -->
-    <script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/main.js" type="text/javascript" charset="utf-8"></script>
- 	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
+    <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
 
     <!-- Local Scripts -->
+    <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 
     </body>
 </html>

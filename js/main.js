@@ -27,6 +27,15 @@ $(document).ready(function(){
     });
   });
 
+	/* all search popover links!! */
+	$(".search-popover-link").popover({
+		trigger:'hover',
+		title:'Patient\'s Orders',
+		content:'Search orders for this patient.',
+		placement:'top',
+	});
+
+
 	if ($('#orders-page-list').is(":visible")) {
 		$('#orders-list-control').toggleClass('active');
 	}
@@ -104,6 +113,28 @@ $(document).ready(function(){
 		$('#practiceLocationModal').modal('show');
 	});
 
+});
+
+/* step 1 */
+
+$('input[type=radio][name=isWorkersComp]').change(function() {
+	if (this.value === 'yes') {
+		$('#workers-comp-questions').hide();
+		$('#workers-comp-questions').removeClass('hide');
+		$('#workers-comp-questions').slideDown();
+  } else {
+		$('#workers-comp-questions').slideUp();
+  }
+});
+
+$('input[type=radio][name=subscriberRelationship]').change(function() {
+	if (this.value === 'other') {
+		$('#other-subscriber-questions').hide();
+		$('#other-subscriber-questions').removeClass('hide');
+		$('#other-subscriber-questions').slideDown();
+  } else {
+		$('#other-subscriber-questions').slideUp();
+  }
 });
 
 

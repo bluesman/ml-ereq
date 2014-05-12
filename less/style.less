@@ -11,8 +11,15 @@ Import Bootstrap LESS and Site Specific LESS
 	color:@brand-danger;
 }
 
-.popover-content {
+a {
+	color:@blue;
+}
 
+a:hover {
+	color:darken(@blue, 10%)
+}
+
+.popover-content {
 	ul.popover-list {
 		border-radius:3px;
 		padding:0px;
@@ -28,17 +35,111 @@ Import Bootstrap LESS and Site Specific LESS
 	text-decoration: none;
 }
 
-.page-body-container {
-	padding:20px;
-	h1 {
-		font-size:20px;
-		margin: 10px 0;
+h1 {
+	font-size:20px;
+	margin: 0px;
+
+	a {
+		color:@gray-light;
 	}
 
+}
+
+p {
+	margin:0px;
+}
+
+.pagination-controls-container {
+	.page-range {
+		width:50px;
+		text-align:center;
+	}
+
+	.arrows {
+		width:75px;
+		text-align: center;
+		a {
+			background-color: @gray-lighter;
+			border-radius: 3px;
+			padding:4px 10px;
+			color: @gray-light;
+		}
+	}
+}
+
+.pagination-controls-container > div {
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.form-select-container {
+	min-width:200px;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid @gray-lighter;
+  background-color: @white;
+  border-radius: 3px;
+  position:relative;
+
+	select {
+		width:100%;
+		background: transparent;
+	  padding: 5px;
+	  font-size: 12px;
+	  border: 0;
+	  border-radius: 0;
+	  -webkit-appearance: none;
+	}
+	i {
+		position:absolute;
+		top:5px;
+		right:10px;
+		color:@gray-lighter;
+		font-size:20px;
+	}
+}
+
+.page-body-container {
+	padding:20px;
 	.page-body {
 
 	}
+	.required-col {
+		text-align:right;
+	}
+
+
+	.green-box-container {
+		.green-box-header {
+			font-size: 18px;
+			padding:10px;
+			background-color: lighten(@brand-success,30%);
+			color: darken(@brand-success,30%);
+			.title-text {
+				color:@gray-dark;
+			}
+		}
+		.green-box-body {
+			padding:10px 10px 10px 30px;
+			background-color: @gray-lighter;
+			min-height:100px;
+			margin-bottom:20px
+		}
+	}
+
+	.green-box-dark {
+		.green-box-header {
+			background-color: @brand-success !important;
+		}
+		.green-box-body-dark {
+			background-color: lighten(@brand-success,30%) !important;
+		}
+	}
+
+
 }
+
+
 
 @import '../less/variables.less'; /* Your site specific LESS variables - these override BS defaults  */
 @import '../less/header.less';

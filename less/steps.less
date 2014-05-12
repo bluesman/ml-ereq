@@ -76,16 +76,24 @@
 
 	}
 
+	#noInsurance {
+		margin-left:0px;
+	}
+	.insurance-list > .row {
+		margin-bottom:20px;
+	}
+
 	.insurance-list {
 		.insurance-number {
-
+			padding:80px 10px;
+			font-size:22px;
 		}
 		.insurance-container {
 			border-radius:4px;
 			border:thin dashed @gray;
 			padding:10px;
 			font-size:12px;
-
+			min-height:214px;
 			.insurance-number {
 				font-size:24px;
 				margin-top:90px;
@@ -186,23 +194,7 @@
 	.retrieve-button {
 		margin-top:25px;
 	}
-	.green-box-container {
-		.green-box-header {
-			font-size: 18px;
-			padding:10px;
-			background-color: lighten(@brand-success,30%);
-			color: darken(@brand-success,30%);
-			.title-text {
-				color:@gray-dark;
-			}
-		}
-		.green-box-body {
-			padding:10px 10px 10px 30px;
-			background-color: @gray-lighter;
-			min-height:100px;
-			margin-bottom:20px
-		}
-	}
+
 }
 
 .step2-page {
@@ -256,23 +248,6 @@
 	.retrieve-button {
 		margin-top:25px;
 	}
-	.green-box-container {
-		.green-box-header {
-			font-size: 18px;
-			padding:10px;
-			background-color: lighten(@brand-success,30%);
-			color: darken(@brand-success,30%);
-			.title-text {
-				color:@gray-dark;
-			}
-		}
-		.green-box-body {
-			padding:10px 10px 10px 30px;
-			background-color: @gray-lighter;
-			min-height:100px;
-			margin-bottom:20px
-		}
-	}
 }
 
 .step3-page {
@@ -287,7 +262,7 @@
 			margin-bottom:40px;
 
 		}
-		
+
 
 		#step3-container {
 			.header-container {
@@ -303,12 +278,12 @@
 						color:@brand-success;
 					}
 					.fa-circle-o {
-						color:@gray-light;
+						color:@gray;
 					}
 					.step3-bubble-text {
 						line-height: 30px;
 						vertical-align: middle;
-						color:@gray-light;
+						color:@gray;
 					}
 				}
 			}
@@ -352,23 +327,6 @@
 
 	.retrieve-button {
 		margin-top:25px;
-	}
-	.green-box-container {
-		.green-box-header {
-			font-size: 18px;
-			padding:10px;
-			background-color: lighten(@brand-success,30%);
-			color: darken(@brand-success,30%);
-			.title-text {
-				color:@gray-dark;
-			}
-		}
-		.green-box-body {
-			padding:10px 10px 10px 30px;
-			background-color: @gray-lighter;
-			min-height:100px;
-			margin-bottom:20px
-		}
 	}
 
 	.send-order-btn {
