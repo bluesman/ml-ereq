@@ -7736,3 +7736,13 @@ select {
   min-height: 100px;
   margin-bottom: 20px;
 }
+.step3-page .send-order-btn {
+  margin-bottom: 35px;
+  margin-left: 50px;
+  background-color: #ff9933;
+  border: #ff9933;
+}
+.step3-page .send-order-modal .thank-you-link {
+  color: darkblue;
+  text-decoration: underline;
+}

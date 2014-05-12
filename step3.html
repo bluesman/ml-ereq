@@ -82,14 +82,14 @@
 					<div class="header-container">
 						<h2>Step 1</h2>
 						<div>Patient Information</div>
-						<i class="fa fa-plus-circle"></i>
+						<a href="step1.html"><i class="fa fa-plus-circle"></i></a>
 					</div>
 				</div>
 				<div id="step2-container">
 					<div class="header-container">
 						<h2>Step 2</h2>
 						<div>Specimen Information</div>
-						<i class="fa fa-plus-circle"></i>
+						<a href="step2.html"><i class="fa fa-plus-circle"></i></a>
 					</div>
 				</div>
 
@@ -421,14 +421,95 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-xs-5">
-								<a href="/step3.html" class="btn btn-info save-and-quit-button">Save and Continue</a>
+				</div>
+				<div class="col-xs-6 green-box-container">
+					<div class="green-box-header clearfix">
+						<div class="title pull-left">
+							<strong class="title-text">&nbsp;Order Specimen Validity Testing</strong></i>
+						</div>
+						<div class="info pull-right">
+							<i class="fa fa-question-circle"></i>
+						</div>
+					</div>
+					<div class="green-box-body">
+						<div class="row">
+							<div class="col-xs-12 form-group">
+							    <form class="filter-form">
+							      <input type="checkbox" name="performTesting" value="perform"><strong> PERFORM</strong><br/>Specimen Validity Testing (14)
+							    </form>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="col-xs-6 green-box-container">
+					<div class="green-box-header clearfix">
+						<div class="title pull-left">
+							<strong class="title-text">&nbsp;Special Instructions</strong></i>
+						</div>
+						<div class="info pull-right">
+							<i class="fa fa-question-circle"></i>
+						</div>
+					</div>
+					<div class="green-box-body">
+						<div class="row">
+							<div class="col-xs-12 form-group">
+							    <form class="filter-form">
+							      <textarea rows="2" cols="60"></textarea>
+							    </form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 green-box-container">
+					<div class="green-box-header clearfix">
+						<div class="title pull-left">
+							<strong class="title-text">&nbsp;Order Notes</strong></i>
+						</div>
+						<div class="info pull-right">
+							<i class="fa fa-question-circle"></i>
+						</div>
+					</div>
+					<div class="green-box-body">
+						<div class="row">
+							<div class="col-xs-12 form-group">
+							    <form class="filter-form">
+							      <input type="checkbox" name="acknowledge" value="acknosledged"> By checking this box, you acknowledge having read and understood the <a href="#">Order Notes</a> in conjunction with the completion and submition of this order.
+							    </form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="col-xs-5">
+						<form class="filter-form">
+					    	<input type="checkbox" name="acknowledge" value="acknosledged"><strong> Print and Preview</strong><br/>a copy for my office
+					    </form>
+					</div>
+					<div class="col-xs-5 pull-right">
+							<button type="button" class="btn btn-info send-order-btn" data-toggle="modal" data-target="#myModal">Send Order</button>
+						</div>
+					</div>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+						    <div class="modal-content send-order-modal">
+						    	<div class="modal-header">
+						        	<h4 class="modal-title">Thank You!</h4>
+						      	</div>
+						      	<div class="modal-body row">
+						      		<i class="fa fa-external-link fa-3x col-xs-2"></i>
+						      		<div class="col-xs-10">
+								      	<p>We appreciate your business. What would you like to do next?</p>
+								        <a href="patients.html" class="thank-you-link">Place another order</a><br/>
+								        <a href="results.html" class="thank-you-link">See results</a><br/>
+								        <a href="orders.html" class="thank-you-link">Check the status of an order</a><br/>
+						      		</div>
+						      	</div>
+						    </div>
+						</div>
+					</div>
+				</div>
 			</form>
+			<h6>The information provided on this form and on the label affixed to the specimen cup is accurate. I authorize Millennium Laboritories to release the results of this testing to the treated authorized healthcare provider or facility. I hereby authorize my insurance plan to be billed and benefits to be paid directly to Millennium Laboratories for service I received. I acknowledge that Millennium Laboritories may be an out-of-network provider with my insurer. I am also aware that in some circumstances my insurer will send the payment directly to me. I agree to endorse the insurance check and forward it to Millennium Laboritories within 30 days of receipt. Failure to do so may result in my account being forwarded to collections and reported to a credit bureau. I understand that Millennium Laboritories may use my specimen and any testing performed on that specimen, for research, development and potential publication purposes, so long as the information has been properly de-identified pursuant to law.</h6>
 		</div>
 	</div>
 </div>
