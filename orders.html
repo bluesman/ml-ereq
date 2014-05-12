@@ -72,118 +72,418 @@
 
 
 
-<div class="container">
+<div class="orders-page container-fluid">
 	<div class="row">
-		<div class="col-md-9">
+
+		<!-- left col -->
+		<div class="col-md-9 orders-page-left">
 			<div class="row head-row">
 				<div class="col-md-2">
-					<h1 class="orders">Orders</h1>
+					<h1>Orders</h1>
+				</div>
+				<div class="col-md-5">
+					<i class="note">Only includes Electronic Requisition orders</i>
+				</div>
+
+				<div class="col-md-3 practices">
+					<form>
+			      <div class="form-group form-select-container">
+			        <select>
+			          <option>All Practices</option>
+			          <option>Dr. Somebody</option>
+			          <option>Dr. Nobody</option>
+			          <option>Dr. Dolittle</option>
+			          <option>Dr. Who</option>
+			        </select>
+			        <i class="fa fa-caret-down"></i>
+			      </div>
+			    </form>
+				</div>
+
+				<div class="col-md-2 clearfix">
+					<div class="pagination-controls-container clearfix pull-right">
+				  	<div class="page-range pull-left">1-100</div>
+						<div class="arrows pull-left">
+						  <a href="#" class="arrow arrow-left"><i class="fa fa-play fa-flip-horizontal"></i></a>
+						  <a href="#" class="arrow arrow-right"><i class="fa fa-play"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- navbar -->
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="navbar navbar-patients" role="navigation">
+					  <div class="container-fluid">
+					    <form class="navbar-form navbar-left search-form" role="search">
+					      <div class="form-group">
+					        <input type="text" class="form-control" placeholder="Search Orders"/>
+					        <i class="fa fa-search search-icon"></i>
+					      </div>
+					    </form>
+					    <ul class="nav navbar-nav">
+					    	<li>
+						      	<a href="#"><i class="fa fa-calendar">
+									<input type="hidden" id="from" name="from">
+									<input type="hidden" id="to" name="to">&nbsp;Date Range</i>
+								</a>
+							</li>
+					    	<li class="dropdown">
+					          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-align-justify">&nbsp;Filter</i></a>
+					          <ul class="dropdown-menu filter">
+					            <li><a href="#">All</a></li>
+					            <li><a href="#">Order Not Sent</a></li>
+					            <li><a href="#">Order Sent</a></li>
+					            <li><a href="#">Order Canceled</a></li>
+					          </ul>
+					        </li>
+					    </ul>
+					    <ul class="nav navbar-nav navbar-right">
+					      <li><a href="#" id="orders-list-control"><i class="fa fa-list">&nbsp;List</i></a></li>
+					      <li><a href="#" id="orders-table-control"><i class="fa fa-table">&nbsp;Table</i></a></li>
+					    </ul>
+					  </div><!-- /.container-fluid -->
+					</nav>
+				</div>
+			</div>
+
+			<div id="orders-page-list">
+
+																<div class="orders-list-row-container RECEIVED Order Not Sent">
+	<div class="row">
+		<div class="col-md-3 order-status-col">
+			<div class="clearfix">
+				<div class="order-icon pull-left">
+					<i class="fa fa-pencil-square-o"></i>
+				</div>
+				<div class="order-info pull-left">
+					<div><strong class="order-sent-status ">Order Not Sent</strong></div>
+					<div class="order-created-date">Order Created: 10/24/2014</div>
+					<div class="order-sent-date">Order Sent: </span><span class="order-sent-date">N/A</div>
+				</div>
+			</div>
+			<div class="order-specimen-status">
+				<strong>Specimen:&nbsp;</strong><span class="order-specimen-status-value">RECEIVED</span>
+			</div>
+			<div class="order-specimen-id">
+				<strong>Specimen ID:&nbsp;</strong><span>H1024005</span>
+			</div>
+			<div class="order-requesting-provider">
+				<strong>Requesting Provider:&nbsp;</strong><br/><i>Kathy Johnson</i>
+			</div>
+		</div>
+		<div class="col-md-9 order-controls-col">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="order-image">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="test-name">6 Panel Test</div>
+					<div class="patient-name">
+						<strong>Last, First M.</strong>
+						<a href="#" class="search-popover-link">
+							<i class="fa fa-search"></i>
+						</a>
+					</div>
+					<div class="practice-patient-id">
+						<strong>Practice's Patient ID:&nbsp;</strong>
+						<span>123456</span>
+					</div>
+					<div class="dob"><strong>Date Of Birth:&nbsp;</strong>08/18/1970</div>
 				</div>
 				<div class="col-md-4">
-					<p class="note">Only includes Electronic Requisition orders</p>
-				</div>
-				<div class="col-md-3 practices">
-				  	<form class="navbar-form navbar-right filter-form" role="filter">
-				      <div class="form-group">
-				        <select>
-				          <option>All Practices</option>
-				          <option>Dr. Somebody</option>
-				          <option>Dr. Nobody</option>
-				          <option>Dr. Dolittle</option>
-				          <option>Dr. Who</option>
-				        </select>
-				        <i class="fa fa-caret-down"></i>
-				      </div>
-				    </form>
-				</div>
-				<div class="col-md-1 pagation">
-				  <p>1-100</p>
-				</div>
-				<div class="col-md-2 arrows">
-				  <a href="#" class="col-md-1 change-page"><i class="fa fa-play fa-2x fa-flip-horizontal"></i></a>
-				  <a href="#" class="col-md-1 change-page"><i class="fa fa-play fa-2x"></i></a>
+					<div class="order-buttons">
+						<div class="order-btn send-btn">
+							<a href="#" type="button" class="btn btn-info">Send</a>
+						</div>
+						<div class="order-btn edit-btn">
+							<a href="#" type="button" class="btn btn-info">Edit</a>
+						</div>
+						<div class="order-btn cancel-btn">
+							<a href="#" type="button" class="btn btn-info">Cancel</a>
+						</div>
+						<div class="order-btn reopen-btn">
+							<a href="#" type="button" class="btn btn-info">Reopen</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="row order-nav">
-				<nav class="navbar navbar-patients" role="navigation">
-				  <div class="container-fluid">
-				    <form class="navbar-form navbar-left search-form" role="search">
-				      <div class="form-group">
-				        <input type="text" class="form-control" placeholder="Search Orders"/>
-				        <i class="fa fa-search search-icon"></i>
-				      </div>
-				    </form>
-				    <ul class="nav navbar-nav">
-				    	<li>
-					      	<a href="#"><i class="fa fa-calendar">
-								<input type="hidden" id="from" name="from">
-								<input type="hidden" id="to" name="to">&nbsp;Date Range</i>
-							</a>
-						</li>
-				    	<li class="dropdown">
-				          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-align-justify">&nbsp;Filter</i></a>
-				          <ul class="dropdown-menu filter">
-				            <li><a href="#">All</a></li>
-				            <li><a href="#">Order Not Sent</a></li>
-				            <li><a href="#">Order Sent</a></li>
-				            <li><a href="#">Order Canceled</a></li>
-				          </ul>
-				        </li>
-				    </ul>
-				    <ul class="nav navbar-nav navbar-right">
-				      <li><a href="#" id="orders-list-control"><i class="fa fa-list">&nbsp;List</i></a></li>
-				      <li><a href="#" id="orders-table-control"><i class="fa fa-table">&nbsp;Table</i></a></li>
-				    </ul>
-				  </div><!-- /.container-fluid -->
-				</nav>
+			<div class="row">
+				<div class="entered-by"><i>Order entered by: Jane Doe</i></div>
 			</div>
-			<div id="orders-page-list">
-				<div class="row">
-					<div class="col-md-12 order-info">
-						<div class="row">
-							<img class="col-md-3" src="images/order-red.png">
-							<img class="col-md-8 order-red" src="images/order-content.png">
-							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Send</a>
-							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Edit</a>
-							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Cancel</a>
+		</div>
+	</div>
+</div>
+
+																<div class="orders-list-row-container NOT RECEIVED Order Not Sent">
+	<div class="row">
+		<div class="col-md-3 order-status-col">
+			<div class="clearfix">
+				<div class="order-icon pull-left">
+					<i class="fa fa-pencil-square-o"></i>
+				</div>
+				<div class="order-info pull-left">
+					<div><strong class="order-sent-status ">Order Not Sent</strong></div>
+					<div class="order-created-date">Order Created: 10/24/2014</div>
+					<div class="order-sent-date">Order Sent: </span><span class="order-sent-date">N/A</div>
+				</div>
+			</div>
+			<div class="order-specimen-status">
+				<strong>Specimen:&nbsp;</strong><span class="order-specimen-status-value">NOT RECEIVED</span>
+			</div>
+			<div class="order-specimen-id">
+				<strong>Specimen ID:&nbsp;</strong><span>H1024005</span>
+			</div>
+			<div class="order-requesting-provider">
+				<strong>Requesting Provider:&nbsp;</strong><br/><i>Kathy Johnson</i>
+			</div>
+		</div>
+		<div class="col-md-9 order-controls-col">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="order-image">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="test-name">6 Panel Test</div>
+					<div class="patient-name">
+						<strong>Last, First M.</strong>
+						<a href="#" class="search-popover-link">
+							<i class="fa fa-search"></i>
+						</a>
+					</div>
+					<div class="practice-patient-id">
+						<strong>Practice's Patient ID:&nbsp;</strong>
+						<span>123456</span>
+					</div>
+					<div class="dob"><strong>Date Of Birth:&nbsp;</strong>08/18/1970</div>
+				</div>
+				<div class="col-md-4">
+					<div class="order-buttons">
+						<div class="order-btn send-btn">
+							<a href="#" type="button" class="btn btn-info">Send</a>
+						</div>
+						<div class="order-btn edit-btn">
+							<a href="#" type="button" class="btn btn-info">Edit</a>
+						</div>
+						<div class="order-btn cancel-btn">
+							<a href="#" type="button" class="btn btn-info">Cancel</a>
+						</div>
+						<div class="order-btn reopen-btn">
+							<a href="#" type="button" class="btn btn-info">Reopen</a>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12 order-info">
-						<div class="row">
-							<img class="col-md-3" src="images/order-yellow.png">
-							<img class="col-md-8 order-orange" src="images/order-content.png">
-							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Edit</a>
-							<a href="#" type="button" class="btn btn-info order-btn col-md-1">Cancel</a>
+			</div>
+			<div class="row">
+				<div class="entered-by"><i>Order entered by: Jane Doe</i></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+																<div class="orders-list-row-container NOT RECEIVED Order Sent">
+	<div class="row">
+		<div class="col-md-3 order-status-col">
+			<div class="clearfix">
+				<div class="order-icon pull-left">
+					<i class="fa fa-pencil-square-o"></i>
+				</div>
+				<div class="order-info pull-left">
+					<div><strong class="order-sent-status ">Order Sent</strong></div>
+					<div class="order-created-date">Order Created: 10/24/2014</div>
+					<div class="order-sent-date">Order Sent: </span><span class="order-sent-date">10/24/2014</div>
+				</div>
+			</div>
+			<div class="order-specimen-status">
+				<strong>Specimen:&nbsp;</strong><span class="order-specimen-status-value">NOT RECEIVED</span>
+			</div>
+			<div class="order-specimen-id">
+				<strong>Specimen ID:&nbsp;</strong><span>H1024005</span>
+			</div>
+			<div class="order-requesting-provider">
+				<strong>Requesting Provider:&nbsp;</strong><br/><i>Kathy Johnson</i>
+			</div>
+		</div>
+		<div class="col-md-9 order-controls-col">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="order-image">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="test-name">6 Panel Test</div>
+					<div class="patient-name">
+						<strong>Last, First M.</strong>
+						<a href="#" class="search-popover-link">
+							<i class="fa fa-search"></i>
+						</a>
+					</div>
+					<div class="practice-patient-id">
+						<strong>Practice's Patient ID:&nbsp;</strong>
+						<span>123456</span>
+					</div>
+					<div class="dob"><strong>Date Of Birth:&nbsp;</strong>08/18/1970</div>
+				</div>
+				<div class="col-md-4">
+					<div class="order-buttons">
+						<div class="order-btn send-btn">
+							<a href="#" type="button" class="btn btn-info">Send</a>
+						</div>
+						<div class="order-btn edit-btn">
+							<a href="#" type="button" class="btn btn-info">Edit</a>
+						</div>
+						<div class="order-btn cancel-btn">
+							<a href="#" type="button" class="btn btn-info">Cancel</a>
+						</div>
+						<div class="order-btn reopen-btn">
+							<a href="#" type="button" class="btn btn-info">Reopen</a>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12 order-info">
-						<div class="row">
-							<img class="col-md-3" src="images/order-yellow.png">
-							<img class="col-md-8 order-orange" src="images/order-content.png">
+			</div>
+			<div class="row">
+				<div class="entered-by"><i>Order entered by: Jane Doe</i></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+																<div class="orders-list-row-container RECEIVED Order Sent">
+	<div class="row">
+		<div class="col-md-3 order-status-col">
+			<div class="clearfix">
+				<div class="order-icon pull-left">
+					<i class="fa fa-pencil-square-o"></i>
+				</div>
+				<div class="order-info pull-left">
+					<div><strong class="order-sent-status ">Order Sent</strong></div>
+					<div class="order-created-date">Order Created: 10/24/2014</div>
+					<div class="order-sent-date">Order Sent: </span><span class="order-sent-date">10/24/2014</div>
+				</div>
+			</div>
+			<div class="order-specimen-status">
+				<strong>Specimen:&nbsp;</strong><span class="order-specimen-status-value">RECEIVED</span>
+			</div>
+			<div class="order-specimen-id">
+				<strong>Specimen ID:&nbsp;</strong><span>H1024005</span>
+			</div>
+			<div class="order-requesting-provider">
+				<strong>Requesting Provider:&nbsp;</strong><br/><i>Kathy Johnson</i>
+			</div>
+		</div>
+		<div class="col-md-9 order-controls-col">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="order-image">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="test-name">6 Panel Test</div>
+					<div class="patient-name">
+						<strong>Last, First M.</strong>
+						<a href="#" class="search-popover-link">
+							<i class="fa fa-search"></i>
+						</a>
+					</div>
+					<div class="practice-patient-id">
+						<strong>Practice's Patient ID:&nbsp;</strong>
+						<span>123456</span>
+					</div>
+					<div class="dob"><strong>Date Of Birth:&nbsp;</strong>08/18/1970</div>
+				</div>
+				<div class="col-md-4">
+					<div class="order-buttons">
+						<div class="order-btn send-btn">
+							<a href="#" type="button" class="btn btn-info">Send</a>
+						</div>
+						<div class="order-btn edit-btn">
+							<a href="#" type="button" class="btn btn-info">Edit</a>
+						</div>
+						<div class="order-btn cancel-btn">
+							<a href="#" type="button" class="btn btn-info">Cancel</a>
+						</div>
+						<div class="order-btn reopen-btn">
+							<a href="#" type="button" class="btn btn-info">Reopen</a>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12 order-info">
-						<div class="row">
-							<img class="col-md-3" src="images/order-green.png">
-							<img class="col-md-8 order-green" src="images/order-content.png">
+			</div>
+			<div class="row">
+				<div class="entered-by"><i>Order entered by: Jane Doe</i></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+																<div class="orders-list-row-container NOT RECEIVED Order Canceled">
+	<div class="row">
+		<div class="col-md-3 order-status-col">
+			<div class="clearfix">
+				<div class="order-icon pull-left">
+					<i class="fa fa-pencil-square-o"></i>
+				</div>
+				<div class="order-info pull-left">
+					<div><strong class="order-sent-status ">Order Canceled</strong></div>
+					<div class="order-created-date">Order Created: 10/24/2014</div>
+					<div class="order-sent-date">Order Sent: </span><span class="order-sent-date">N/A</div>
+				</div>
+			</div>
+			<div class="order-specimen-status">
+				<strong>Specimen:&nbsp;</strong><span class="order-specimen-status-value">NOT RECEIVED</span>
+			</div>
+			<div class="order-specimen-id">
+				<strong>Specimen ID:&nbsp;</strong><span>H1024005</span>
+			</div>
+			<div class="order-requesting-provider">
+				<strong>Requesting Provider:&nbsp;</strong><br/><i>Kathy Johnson</i>
+			</div>
+		</div>
+		<div class="col-md-9 order-controls-col">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="order-image">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="test-name">6 Panel Test</div>
+					<div class="patient-name">
+						<strong>Last, First M.</strong>
+						<a href="#" class="search-popover-link">
+							<i class="fa fa-search"></i>
+						</a>
+					</div>
+					<div class="practice-patient-id">
+						<strong>Practice's Patient ID:&nbsp;</strong>
+						<span>123456</span>
+					</div>
+					<div class="dob"><strong>Date Of Birth:&nbsp;</strong>08/18/1970</div>
+				</div>
+				<div class="col-md-4">
+					<div class="order-buttons">
+						<div class="order-btn send-btn">
+							<a href="#" type="button" class="btn btn-info">Send</a>
+						</div>
+						<div class="order-btn edit-btn">
+							<a href="#" type="button" class="btn btn-info">Edit</a>
+						</div>
+						<div class="order-btn cancel-btn">
+							<a href="#" type="button" class="btn btn-info">Cancel</a>
+						</div>
+						<div class="order-btn reopen-btn">
+							<a href="#" type="button" class="btn btn-info">Reopen</a>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12 order-info">
-						<div class="row">
-							<img class="col-md-3" src="images/order-gray.png">
-							<img class="col-md-8 order-gray" src="images/order-content.png">
-							<button type="button" class="btn btn-info order-btn col-md-1" data-toggle="modal" data-target="#myModal">Reopen</button>
-						</div>
-					</div>
-				</div>
+			</div>
+			<div class="row">
+				<div class="entered-by"><i>Order entered by: Jane Doe</i></div>
+			</div>
+		</div>
+	</div>
+</div>
+
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				  <div class="modal-dialog">
 				    <div class="modal-content reopen-modal">
@@ -195,94 +495,163 @@
 				  </div>
 				</div>
 			</div>
-			<div id="orders-page-table" class="hidden row">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>Preview</th>
-							<th>Specimin ID</th>
-							<th>Order Created Date</th>
-							<th>Patient Name <i class="fa fa-caret-down"></i></th>
-							<th>Order Status</th>
-							<th>Order Sent Date</th>
-							<th> </th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-	<td><a href="#" class="preview"><i class="fa fa-external-link"></i></a></td>
+
+			<div id="orders-page-table" class="hidden">
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th class="first">Preview</th>
+									<th>Specimin ID</th>
+									<th>Order Created Date</th>
+									<th>Patient Name <i class="fa fa-caret-down"></i></th>
+									<th>Order Status</th>
+									<th>Order Sent Date</th>
+									<th class="last"> </th>
+								</tr>
+							</thead>
+							<tbody>
+																																<tr class="RECEIVED Order Not Sent">
+	<td class="preview"><a href="#"><i class="fa fa-external-link"></i></a></td>
 	<td>H1024002</td>
 	<td>10/24/2013</td>
-	<td>LASTNAME FIRSTNAME M<br><span style="font-size: 10px; color: #999">Date Of Birth</span> 00/00/0000</td>
-	<td class="status">Order Not Sent<br><span style="font-size: 10px; color: #999">Specimen:</span><span style="color: #cc3300">Received</span></td>
-	<td><a href="/step1" class="btn btn-warning btn-sm">Send&nbsp;</a></td>
-	<td><a class="btn btn-info btn-sm" href="/step1.html">Edit</a> <a class="btn btn-info btn-sm" href="#">Cancel</a></td>
-</tr>						<tr>
-	<td><a href="#" class="preview"><i class="fa fa-external-link"></i></a></td>
+	<td>LASTNAME FIRSTNAME M<br><span>Date Of Birth:</span><span>&nbsp;08/18/1970</span></td>
+	<td class="order-sent-status order-status-col"><strong>Order Not Sent</strong><br><span>Specimen:&nbsp;</span><span class="order-specimen-status-value">RECEIVED</span></td>
+	<td>
+		<a href="/step1" class="btn btn-warning btn-sm send-btn">Send&nbsp;</a>
+	</td>
+	<td class="clearfix last">
+		<a class="btn btn-info btn-sm edit-btn pull-left" href="/step1.html">Edit</a>
+		<a class="btn btn-info btn-sm cancel-btn pull-left" href="#">Cancel</a>
+		<a class="btn btn-info btn-sm reopen-btn" href="#">Reopen</a>
+	</td>
+</tr>
+
+																																<tr class="NOT RECEIVED Order Not Sent">
+	<td class="preview"><a href="#"><i class="fa fa-external-link"></i></a></td>
 	<td>H1024002</td>
 	<td>10/24/2013</td>
-	<td>LASTNAME FIRSTNAME M<br><span style="font-size: 10px; color: #999">Date Of Birth</span> 00/00/0000</td>
-	<td class="status">Order Not Sent<br><span style="font-size: 10px; color: #999">Specimen:</span><span style="color: #cc3300">Received</span></td>
-	<td><a href="/step1" class="btn btn-warning btn-sm">Send&nbsp;</a></td>
-	<td><a class="btn btn-info btn-sm" href="/step1.html">Edit</a> <a class="btn btn-info btn-sm" href="#">Cancel</a></td>
-</tr>						<tr>
-	<td><a href="#" class="preview"><i class="fa fa-external-link"></i></a></td>
+	<td>LASTNAME FIRSTNAME M<br><span>Date Of Birth:</span><span>&nbsp;08/18/1970</span></td>
+	<td class="order-sent-status order-status-col"><strong>Order Not Sent</strong><br><span>Specimen:&nbsp;</span><span class="order-specimen-status-value">NOT RECEIVED</span></td>
+	<td>
+		<a href="/step1" class="btn btn-warning btn-sm send-btn">Send&nbsp;</a>
+	</td>
+	<td class="clearfix last">
+		<a class="btn btn-info btn-sm edit-btn pull-left" href="/step1.html">Edit</a>
+		<a class="btn btn-info btn-sm cancel-btn pull-left" href="#">Cancel</a>
+		<a class="btn btn-info btn-sm reopen-btn" href="#">Reopen</a>
+	</td>
+</tr>
+
+																																<tr class="NOT RECEIVED Order Sent">
+	<td class="preview"><a href="#"><i class="fa fa-external-link"></i></a></td>
 	<td>H1024002</td>
 	<td>10/24/2013</td>
-	<td>LASTNAME FIRSTNAME M<br><span style="font-size: 10px; color: #999">Date Of Birth</span> 00/00/0000</td>
-	<td class="status">Order Not Sent<br><span style="font-size: 10px; color: #999">Specimen:</span><span style="color: #cc3300">Received</span></td>
-	<td><a href="/step1" class="btn btn-warning btn-sm">Send&nbsp;</a></td>
-	<td><a class="btn btn-info btn-sm" href="/step1.html">Edit</a> <a class="btn btn-info btn-sm" href="#">Cancel</a></td>
-</tr>						<tr>
-	<td><a href="#" class="preview"><i class="fa fa-external-link"></i></a></td>
+	<td>LASTNAME FIRSTNAME M<br><span>Date Of Birth:</span><span>&nbsp;08/18/1970</span></td>
+	<td class="order-sent-status order-status-col"><strong>Order Sent</strong><br><span>Specimen:&nbsp;</span><span class="order-specimen-status-value">NOT RECEIVED</span></td>
+	<td>
+		<a href="/step1" class="btn btn-warning btn-sm send-btn">Send&nbsp;</a>
+	</td>
+	<td class="clearfix last">
+		<a class="btn btn-info btn-sm edit-btn pull-left" href="/step1.html">Edit</a>
+		<a class="btn btn-info btn-sm cancel-btn pull-left" href="#">Cancel</a>
+		<a class="btn btn-info btn-sm reopen-btn" href="#">Reopen</a>
+	</td>
+</tr>
+
+																																<tr class="RECEIVED Order Sent">
+	<td class="preview"><a href="#"><i class="fa fa-external-link"></i></a></td>
 	<td>H1024002</td>
 	<td>10/24/2013</td>
-	<td>LASTNAME FIRSTNAME M<br><span style="font-size: 10px; color: #999">Date Of Birth</span> 00/00/0000</td>
-	<td class="status">Order Not Sent<br><span style="font-size: 10px; color: #999">Specimen:</span><span style="color: #cc3300">Received</span></td>
-	<td><a href="/step1" class="btn btn-warning btn-sm">Send&nbsp;</a></td>
-	<td><a class="btn btn-info btn-sm" href="/step1.html">Edit</a> <a class="btn btn-info btn-sm" href="#">Cancel</a></td>
-</tr>						<tr>
-	<td><a href="#" class="preview"><i class="fa fa-external-link"></i></a></td>
+	<td>LASTNAME FIRSTNAME M<br><span>Date Of Birth:</span><span>&nbsp;08/18/1970</span></td>
+	<td class="order-sent-status order-status-col"><strong>Order Sent</strong><br><span>Specimen:&nbsp;</span><span class="order-specimen-status-value">RECEIVED</span></td>
+	<td>
+		<a href="/step1" class="btn btn-warning btn-sm send-btn">Send&nbsp;</a>
+	</td>
+	<td class="clearfix last">
+		<a class="btn btn-info btn-sm edit-btn pull-left" href="/step1.html">Edit</a>
+		<a class="btn btn-info btn-sm cancel-btn pull-left" href="#">Cancel</a>
+		<a class="btn btn-info btn-sm reopen-btn" href="#">Reopen</a>
+	</td>
+</tr>
+
+																																<tr class="NOT RECEIVED Order Canceled">
+	<td class="preview"><a href="#"><i class="fa fa-external-link"></i></a></td>
 	<td>H1024002</td>
 	<td>10/24/2013</td>
-	<td>LASTNAME FIRSTNAME M<br><span style="font-size: 10px; color: #999">Date Of Birth</span> 00/00/0000</td>
-	<td class="status">Order Not Sent<br><span style="font-size: 10px; color: #999">Specimen:</span><span style="color: #cc3300">Received</span></td>
-	<td><a href="/step1" class="btn btn-warning btn-sm">Send&nbsp;</a></td>
-	<td><a class="btn btn-info btn-sm" href="/step1.html">Edit</a> <a class="btn btn-info btn-sm" href="#">Cancel</a></td>
-</tr>					</tbody>
-				</table>
+	<td>LASTNAME FIRSTNAME M<br><span>Date Of Birth:</span><span>&nbsp;08/18/1970</span></td>
+	<td class="order-sent-status order-status-col"><strong>Order Canceled</strong><br><span>Specimen:&nbsp;</span><span class="order-specimen-status-value">NOT RECEIVED</span></td>
+	<td>
+		<a href="/step1" class="btn btn-warning btn-sm send-btn">Send&nbsp;</a>
+	</td>
+	<td class="clearfix last">
+		<a class="btn btn-info btn-sm edit-btn pull-left" href="/step1.html">Edit</a>
+		<a class="btn btn-info btn-sm cancel-btn pull-left" href="#">Cancel</a>
+		<a class="btn btn-info btn-sm reopen-btn" href="#">Reopen</a>
+	</td>
+</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-3">
+
+		<!-- right col -->
+		<div class="col-md-3 orders-page-right">
 			<div class="row">
-				<a href="patients.html" type="button" class="btn btn-info new-order-btn col-md-8">Create new order</a>
+				<div class="col-md-12 new-order-btn-container">
+					<a href="patients.html" type="button" class="btn btn-warning new-order-btn">Create new order</a>
+				</div>
 			</div>
-			<div class="sidebar">
-				<div class="row sidebar-content-1">
-					<div class="col-md-12">
-						<h3>New</h3>
-						<p>Sartorial in Etsy artisan High Life, ugh vinyl retro. Retro small batch flannel reprehenderit photo booth Pitchfork nisi. Squid Odd Future High Life fingerstache, elit stumptown proident sriracha artisan <a href="#" class="sidebar-link">aliquip bespoke.</a></p>
-					</div>
-				</div>
-				<div class="row sidebar-content-2">
-					<i class="fa fa-envelope-o fa-2x pull-left col-md-2 icon"></i>
-					<div class="col-col-md-10">
-						<p class="info">Millenium Laboratories</p>
-						<p class="info">16981 Via Tazon, Suite F</p>
-						<p class="info">San Diego, CA 92127</p>
-					</div>
-				</div>
-				<div class="row sidebar-content-2">
-					<i class="fa fa-mobile fa-3x pull-left col-md-2 icon"></i>
-					<div class="col-col-md-10">
-						<p class="info">Toll Free: 877-451-3534</p>
-						<p class="info">Fax: 858-451-3636</p>
-					</div>
-				</div>
-				<div class="row sidebar-content-2">
-					<i class="fa fa-lock fa-3x pull-left col-md-2 icon"></i>
-					<div class="col-col-md-10">
-						<p>All information in encrypted and transmitted without risk using a Secure Sockets Locker (SSL) protocol.</p>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="sidebar">
+
+						<div class="sidebar-content-1">
+							<div class="row">
+								<div class="col-md-12">
+									<h3>New</h3>
+									<p>Sartorial in Etsy artisan High Life, ugh vinyl retro. Retro small batch flannel reprehenderit photo booth Pitchfork nisi. Squid Odd Future High Life fingerstache, elit stumptown proident sriracha artisan <a href="#">aliquip bespoke.</a></p>
+								</div>
+							</div>
+						</div>
+
+						<div class="sidebar-divider"></div>
+
+						<div class="sidebar-content-2">
+							<div class="row">
+								<div class="col-md-3 icon-container">
+									<i class="fa fa-envelope-o fa-2x"></i>
+								</div>
+								<div class="col-md-9">
+									<address>
+										Millenium Laboratories<br/>
+										16981 Via Tazon, Suite F<br/>
+										San Diego, CA 92127<br/>
+									</address>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 icon-container">
+									<i class="fa fa-mobile fa-3x"></i>
+								</div>
+								<div class="col-md-9">
+									Toll Free: 877-451-3534<br/>
+									Fax: 858-451-3636<br/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 icon-container">
+									<i class="fa fa-lock fa-3x"></i>
+								</div>
+								<div class="col-md-9">
+									All information in encrypted and transmitted without risk using a Secure Sockets Locker (SSL) protocol.
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

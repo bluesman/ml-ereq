@@ -4,6 +4,8 @@
 <!-- @import includes/head -->
 <!-- @import includes/header -->
 <!-- patients navbar -->
+
+
 <nav class="navbar navbar-patients" role="navigation">
   <div class="container-fluid">
     <form class="navbar-form navbar-left search-form" role="search">
@@ -17,7 +19,7 @@
       <li><a href="#" id="patients-cards-control"><i class="fa fa-th">&nbsp;Cards</i></a></li>
     </ul>
     <form class="navbar-form navbar-right filter-form" role="filter">
-      <div class="form-group">
+      <div class="form-group form-select-container">
         <select>
           <option>All Practices</option>
           <option>Dr. Somebody</option>
@@ -28,7 +30,7 @@
         <i class="fa fa-caret-down"></i>
       </div>
     </form>
-  </div><!-- /.container-fluid -->
+  </div>
 </nav>
 
 <div class="modal fade" id="practiceLocationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -61,9 +63,9 @@
   </div>
 </div>
 
-<div id="patients-page-list" class="hidden page-body-container patients-page-body-container">
+<div id="patients-page-list" class="hidden page-body-container patients-page-body-container container-fluid">
   <h1>Choose a patient or add a new one to start your order&nbsp;<a href="#" id="choose-patient-question" data-toggle="popover" data-placement="right" data-content="content" data-title="title"><i class="fa fa-question-circle"></i></a></h1>
-  <div class="patients-page-body page-body container-fluid">
+  <div class="patients-page-body page-body">
     <div class="row">
       <div class="col-xs-2">
         <a href="/step1.html" class="btn btn-warning">
@@ -102,9 +104,9 @@
     </table>
   </div>
 </div>
-<div id="patients-page-cards" class="page-body-container patients-page-body-container">
+<div id="patients-page-cards" class="page-body-container patients-page-body-container container-fluid">
   <h1>Choose a patient or add a new one to start your order&nbsp;<a href="#" id="choose-patient-question" data-toggle="popover" data-placement="right" data-content="content" data-title="title"><i class="fa fa-question-circle"></i></a></h1>
-  <div class="patients-page-body page-body container-fluid">
+  <div class="patients-page-body page-body">
     <div class="row">
       <div class="col-md-3">
         <a href="/step1.html" class="add-patient-card-container">

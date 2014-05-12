@@ -27,6 +27,15 @@ $(document).ready(function(){
     });
   });
 
+	/* all search popover links!! */
+	$(".search-popover-link").popover({
+		trigger:'hover',
+		title:'Patient\'s Orders',
+		content:'Search orders for this patient.',
+		placement:'top',
+	});
+
+
 	if ($('#orders-page-list').is(":visible")) {
 		$('#orders-list-control').toggleClass('active');
 	}
