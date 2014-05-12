@@ -7872,6 +7872,9 @@ p {
   padding: 10px;
   min-height: 150px;
 }
+.step3-page .steps-container .step-link {
+  color: gray;
+}
 .step3-page .save-and-quit-button {
   margin-top: 15px;
   margin-bottom: 7px;
