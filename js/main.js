@@ -72,7 +72,7 @@ $(document).ready(function(){
 				trigger:'hover',
 				title:'Insurance Providers',
 				html:true,
-				content:'<ul class="popover-list"><li>Provider 1</li><li>Providers 2</li></ul><div><a href="/step1" class="btn btn-success pull-right">Edit</a></div>',
+				content:'<ul class="popover-list"><li>Provider 1</li><li>Providers 2</li></ul><div><a href="/step1" class="btn pull-right">Edit</a></div>',
 				placement:'top',
 			});
 		}
@@ -81,7 +81,7 @@ $(document).ready(function(){
 			trigger:'hover',
 			html:true,
 			title:'Prescribed Medications',
-			content:'<ul class="popover-list"><li>Medication 1</li><li>Medication 2</li><li>Medication 3</li></ul><div><a href="/step1" class="btn btn-success pull-right">Edit</a></div>',
+			content:'<ul class="popover-list"><li>Medication 1</li><li>Medication 2</li><li>Medication 3</li></ul><div><a href="/step1" class="btn pull-right">Edit</a></div>',
 			placement:'top',
 		});
 	}
@@ -142,3 +142,15 @@ $('input[type=radio][name=subscriberRelationship]').change(function() {
 	$(function() {
     $( "#datepicker" ).datepicker();
   });
+
+
+
+/* setp 3 */
+
+
+
+/* patients */
+
+$( '.checkboxes' ).on( 'click', 'input:checkbox', function () {
+    $( this ).next('label').toggleClass( 'active-check', this.checked );
+});

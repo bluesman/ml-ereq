@@ -7611,6 +7611,52 @@ p {
 .patients-page-body-container table td {
   border: none !important;
 }
+.modal .modal-header {
+  border-bottom: none;
+}
+.modal .modal-header .modal-title {
+  background-color: #555555;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+}
+.modal .modal-footer {
+  border-top: none;
+}
+.popover {
+  background-color: black;
+  border-radius: 10px;
+}
+.popover .popover-title {
+  color: white;
+  background-color: black;
+  border-bottom: none;
+}
+.popover .popover-content {
+  background-color: white;
+  border: 5px solid black;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.popover .arrow {
+  color: black;
+}
+.popover .btn {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.checkboxes label .active-check {
+  font-family: Open Sans Italic;
+  font-size: 12px;
+  color: red;
+  border-radius: 20px 20px 20px 20px;
+  background: #86b3c1;
+  padding: 3px 10px;
+  text-align: left;
+}
 .step1-page .form-submit-buttons {
   padding: 10px;
 }
