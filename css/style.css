@@ -7873,6 +7873,11 @@ p {
   padding: 10px;
   color: #999999;
 }
+.step3-page .save-bar {
+  padding-top: 500px;
+  padding-left: 40px;
+  width: 80%;
+}
 .step3-page .steps-container #step1-container,
 .step3-page .steps-container #step2-container,
 .step3-page .steps-container #step3-container {
