@@ -7117,6 +7117,16 @@ button.close {
 .fa-plus-square-o:before {
   content: "\f196";
 }
+.save-overlay-container {
+  position: relative;
+}
+#save-overlay.active {
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 .red {
   color: #cc3300;
 }
@@ -7638,8 +7648,8 @@ p {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
-.popover .arrow {
-  color: black;
+.popover .arrow:after {
+  border-top-color: black !important;
 }
 .popover .btn {
   background-color: white;
@@ -7648,14 +7658,8 @@ p {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.checkboxes label .active-check {
-  font-family: Open Sans Italic;
-  font-size: 12px;
-  color: red;
-  border-radius: 20px 20px 20px 20px;
-  background: #86b3c1;
-  padding: 3px 10px;
-  text-align: left;
+.checkboxes .active {
+  color: #33cc33;
 }
 .step1-page .form-submit-buttons {
   padding: 10px;

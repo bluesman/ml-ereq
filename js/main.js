@@ -9,23 +9,41 @@ $(document).ready(function(){
     });
 
 	$(function() {
-    $( "#from" ).datepicker({
-      defaultDate: "+1w",
-      changeMonth: true,
-      numberOfMonths: 2,
-      onClose: function( selectedDate ) {
-        $( "#to" ).datepicker( "option", "minDate", selectedDate );
-      }
-    });
-    $( "#to" ).datepicker({
-      defaultDate: "+1w",
-      changeMonth: true,
-      numberOfMonths: 2,
-      onClose: function( selectedDate ) {
-        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
-      }
-    });
-  });
+	    $( "#from" ).datepicker({
+	      defaultDate: "+1w",
+	      changeMonth: true,
+	      numberOfMonths: 2,
+	      onClose: function( selectedDate ) {
+	        $( "#to" ).datepicker( "option", "minDate", selectedDate );
+	      }
+	    });
+	    $( "#to" ).datepicker({
+	      defaultDate: "+1w",
+	      changeMonth: true,
+	      numberOfMonths: 2,
+	      onClose: function( selectedDate ) {
+	        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+	      }
+	    });
+	});
+
+	/* Save Overlay */
+
+	function toggleOverlay(link) {
+		if ($('#save-overlay').length > 0) {
+			$('#save-overlay').toggleClass('active');
+			$('#save-overlay').toggleClass('hidden');
+			setTimeout(function(){
+				console.log($(link).attr("href"));
+				window.location.href=$(link).attr("href");
+			}, 3000);
+		}
+	}
+
+	$(".save-link").click(function(e) {
+		e.preventDefault();
+		toggleOverlay(this);
+	});
 
 	/* all search popover links!! */
 	$(".search-popover-link").popover({
@@ -147,10 +165,18 @@ $('input[type=radio][name=subscriberRelationship]').change(function() {
 
 /* setp 3 */
 
+$('.toggle-icon-checkbox').click(function() {
+    $(this).next('i').toggleClass("hidden");
+    $(this).prev('i').toggleClass("hidden");
+});
 
 
 /* patients */
 
-$( '.checkboxes' ).on( 'click', 'input:checkbox', function () {
-    $( this ).next('label').toggleClass( 'active-check', this.checked );
+$('#checkbox1').click(function() {
+    $('#label1').toggleClass('active');
+});
+
+$('#checkbox2').click(function() {
+    $('#label2').toggleClass('active');
 });
